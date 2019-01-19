@@ -670,3 +670,137 @@ Einige Beispiele für mögliche Kennzahlen, mit deren Hilfe sich die Prozessqual
 
 ![1547909349220](assets/1547909349220.png)
 
+## Prozess: Availability Management
+
+### Ziel und Kontext
+
+- Prozess aus Service Design
+- Alle mit dem Kunden vereinbarten Services werden im Availability Management in Verfügbarkeitsniveaus eingeteilt. 
+- Der Hauptfokus richtet sich auf adäquate Planung und Realisierung künftiger Serviceanforderungen.
+- Das Availability Management versteht sich als zentrale Anlaufstelle aller Fachbereiche bei der Ausgestaltung der Serviceverfügbarkeit. 
+
+### Rollen
+
+Availability Manager 
+
+- trägt die Prozessverantwortung bezüglich Zuverlässigkeit, Wartbarkeit und Servicefähigkeit gegenüber dem Kunden. 
+- Der Availability Manager stützt sich dabei auf protokollierte Indikatoren aus dem AMIS
+
+→ Das Availability Management Information System (AMIS) ist Bestandteil des Service Knowledge Management.
+
+### Begriffe
+
+|                                   |                                                              |
+| --------------------------------- | ------------------------------------------------------------ |
+| Zuverlässigkeit (Reliability)     | Beschreibt die Fähigkeit eines Service oder einer Komponente, eine vereinbarte Funktion ohne Unterbrechung zu liefern. |
+|                                   |                                                              |
+| Wartbarkeit (Maintainability)     | Wartbarkeit beschreibt, wie groß der Aufwand ist, eine Komponente oder einen Service zu betreiben. |
+|                                   |                                                              |
+| Servicefähigkeit (Serviceability) | Beschreibung der Fähigkeit eines externen Providers, die vertraglich vereinbarten Leistungen für die bereitgestellten Services oder Komponenten zu erbringen. |
+
+Begriffe zur Verfügbarkeit
+
+|           |                                                              |
+| --------- | ------------------------------------------------------------ |
+| MTRS/MTTR | Meantime To Restore Service oder Mean Time to Repair “Downtime” ist die durchschnittliche (nicht garantierte) Reparaturzeit zur Behebung einer Störung. |
+|           |                                                              |
+| MTBF      | Mean Time Between Failures, oft auch „Uptime“ genannt, beschreibt die durchschnittliche Zeit, in der ein Service verfügbar ist. |
+|           |                                                              |
+| MTBSI     | Mean Time Between System Incidents, beschreibt die durchschnittliche Zeit zwischen dem Auftreten zweier Incidents, mit Betrachtung der Reparatur und Wiederherstellungszeiten. |
+
+Begriffe zum Verfügbarkeitsniveaus
+
+|                         |                                                              |
+| ----------------------- | ------------------------------------------------------------ |
+| High Availability       | Mittels Redundanzen erreicht man hohe Verfügbarkeit          |
+|                         |                                                              |
+| Fault Tolerance         | Korrekte Funktion eines Service trotz eines Komponentenausfalls - z.B. durch Workaround |
+|                         |                                                              |
+| Continuous Operation    | Gezielte Massnahmen, um die geplante Downtime eines Service trotz notwendiger Wartung zu reduzieren - z.B. Continuity Management gewisser Services von RZ auf Failover RZ |
+|                         |                                                              |
+| Continuous Availability | Ansatz zur Annäherung an eine 100 %-Verfügbarkeit durch die Kombination unterschiedlicher Massnahmen und Technologien - - z.B. Continuity Management von RZ auf Failover RZ |
+
+### Aktivitäten
+
+![1547923651793](assets/1547923651793.png)
+
+### Availability Plan
+
+Enthält Ziele für die Gestaltung der Verfügbarkeit in Bezug zu den Geschäfsanforderungen und konkrete Massnahmen 
+
+- Vergleich von vereinbarter Verfügbarkeit <=> tatsächlichen aktuellen Verfügbarkeit
+- Verbesserung der Verfügbarkeit
+- Entscheidungsvorlagen bezüglich Kosten und Nutzen
+- Bewertung erwarteter Änderungen 
+- Auswirkungen geplanter neuer Services auf Verfügbarkeit
+
+### KPI
+
+|                                                  |                                                              |
+| ------------------------------------------------ | ------------------------------------------------------------ |
+| Service-Verfügbarkeit                            | Verfügbarkeiten der IT-Services relativ zu den in den SLAs vereinbarten Verfügbarkeiten |
+|                                                  |                                                              |
+| Anzahl von Service-Unterbrechungen               | Anzahl von Unterbrechungen der IT-Services pro Zeitintervall |
+|                                                  |                                                              |
+| Dauer von Service-Unterbrechungen                | Durchschnittliche Dauer von Unterbrechungen der IT-Services  |
+|                                                  |                                                              |
+| Abdeckung der Verfügbarkeits-Überwachung         | Prozentsatz von Services und Infrastruktur-komponenten unter Verfügbarkeits-Überwachung |
+|                                                  |                                                              |
+| Anzahl implementierter Verfügbarkeits-Massnahmen | Anzahl der implementierten Massnahmen mit dem Ziel der Verfügbarkeits-Erhöhung |
+
+## Prozess: Capacity Management
+
+### Kontext
+
+Die Service Design analysiert die Wünsche und Anforderungen der Kunden, und das Capacity Management ist in dieser Phase der kritische Erfolgsfaktor für die Definition eines IT-Service.
+
+### Ziele
+
+Sicherstellung, dass die IT-Kapazität auf **aktuelle** und **zukünftige Bedürfnisse** des Kunden zu vertretbaren Kosten **abdeckt**.
+
+### Unterprozesse
+
+| Businesss Capacity   Management       | Anforderungen in Spezifikationen für   den Service und die Infrastruktur umwandeln, mit   dem Fokus auch auf zukünftige Anforderungen. |
+| ------------------------------------- | ------------------------------------------------------------ |
+| Service Capacity   Management         | Identifiziert und verschafft sich einen fundierten Einblick   in die IT-Services (einschliesslich Design Patterns, Architektur,   usw.), um sie auf die definierten Ziele   abzustimmen. |
+| Component Capacity   Management (CCM) | Managed, kontrolliert und prognostiziert die   Performance und Kapazität einzelner   Komponenten. |
+
+### Aktivitäten
+
+Proaktive Aktivitäten:
+
+* Prognostizierung zukünftiger Anforderungen und Trends
+* Budgetierung, Planung und Implementierung von Upgrades
+* Suchen nach neuen Wegen, um Serviceleistungen zu verbessern
+* Optimierung der Leistung eines Services
+
+Reaktive Aktivitäten:
+
+* Monitoring und Messungen durchführen
+
+### Begriffe
+
+Capacity-Plan
+
+* Business Szenarien
+* Prognose für die Service-Auslastung und Performance
+* Prognose für die Ressourcen-Auslastung und Performance
+* Andere portentielle Auswirkungen auf die Service-Kapazität und Performance
+* Initiativen zur Anpassung von Service-Kapazitäten und Performance
+
+CIMS: Capacity Management Information System
+
+### KPI
+
+| Vorfälle   aufgrund von Kapazitätsengpässen | Anzahl der Vorfälle, die   aufgrund unzureichender Service-   oder Komponentenkapazität auftreten |
+| ------------------------------------------- | ------------------------------------------------------------ |
+| Genauigkeit   der Kapazitätsprognose        | Abweichung der   prognostizierten Kapazitätsentwicklung vom tatsächlichen   Verlauf |
+| Kapazitätsanpassungen                       | Anzahl der Anpassungen der   Service- und Komponentenkapazitäten aufgrund   veränderter Nachfrage |
+
+
+
+| Ungeplante   Kapazitätsanpassungen      | Anzahl der ungeplanten   Erhöhungen der Service- oder Komponentenkapazität aufgrund   von Kapazitätsengpässen |
+| --------------------------------------- | ------------------------------------------------------------ |
+| Lösungszeit   bei Kapazitätsengpässen   | Lösungszeit für   identifizierte Kapazitätsengpässe          |
+| Kapazitätsreserven                      | Prozentsatz der Kapazitätsreserven bei Normal-   und Maximalbedarf |
+| Prozentsatz   der Kapazitätsüberwachung | Prozentsatz der Dienste   und   Infrastrukturkomponenten im Rahmen der Kapazitätsüberwachung |
