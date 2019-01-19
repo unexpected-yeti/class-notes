@@ -109,6 +109,7 @@ Der “Modus Switch” kann ohne einen Status-Wechsel vom momentan laufenden Pro
 ## Prozesszustände und Übergänge (UNIX Process Status)
 **Prüfungsstoff!**
 ![](DraggedImage-13.png)
+
 * **User Running**: Executing in user mode.
 * **Kernel Running**: Executing in kernel mode.
 * **Ready to Run, in Memory**: Ready to run as soon as the kernel schedules it.
