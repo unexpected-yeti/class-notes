@@ -11,21 +11,20 @@
 
 ## IT-Betrieb im Unternehmen
 
-## Aufgabe 2
+### Aufgabe 2 (Im Unterricht)
+
 - Zugang zum internationalen Börsenverkehr
 - Hochverfügbares IT-System
 - Effiziente Arbeitsmittel (Bildschirme, Tastaturen, etc.)
 - Tiefe Latenzen bei Börseninformationen
 - Controlling / Aufsichtsprozesse
 
-## Aufgabe 3 - Laptop/PC Unterhalt
+### Aufgabe 3 - Laptop/PC Unterhalt (Im Unterricht)
 
 - CCleaner
 - Backup/Restore
 - Updates
 - Akku laden
-
-
 
 ## ITIL (IT Infrastructure Library)
 

@@ -1,41 +1,56 @@
 # 09 - Vertiefung ITIL-Prozesse
 
-## Stoffabgrenzung
+[TOC]
+
+
+
+# Stoffabgrenzung
 
 * Sie kennen ITIL Vers. 3 und dessen Phasenmodell und Prozessgruppen
-* Sie kennen und verstehen die wichtigsten IT-Betriebsprozesse aus ITIL V3 und deren Bedeutung für das
-  Unternehmen.
-* Sie kennen folgende ITIL-Prozesse vertieft: Continual Service Improvement, Service Asset & Configuration Mgmt., Change Mgmt., Software Deployment, Incident Mgmt.
+* Sie kennen und verstehen die wichtigsten IT-Betriebsprozesse aus ITIL V3 und deren Bedeutung für das Unternehmen.
+* Sie kennen folgende ITIL-Prozesse vertieft:
+  * Continual Service Improvement
+  * Service Asset & Configuration Mgmt.
+  * Change Mgmt.
+  * Software Deployment
+  * Incident Mgmt
 * Die ausgewählten und als Experte bearbeiteten IT-Betriebsprozesse aus der Testatübung gehören dazu.
 * Die zu den vertieften Prozessen zugehörigen Kapitel im Buch ITIL V3 gehören auch zum Prüfungsstoff.
+
+
+
+# Einführung
+
+## ITIL v3
+
+- Good Practice Framework
+- Öffentlich Zugänglich, seit Ende 80er Jahre entwickelt, besteht heute aus 5 Kern-"Büchern"
+- ITIL beschreibt die Prozesse, die einen effektiven und effizienten Betrieb der gesamten IT-Infrastruktur ermöglichen
 
 ## Prozessgruppen
 
 * ITILv3 basiert im Kern auf dem Service Lifecycle
-* Der Service Lifecycle beschreibt den Lebenszyklus des IT-Services
-  von der Erfassung der Anforderung über die Gestaltung,
-  Implementierung und den Betrieb bis hin zur kontinuierlichen
-  Anpassung der Servicequalität und letztlich der Außerbetriebnahme.
-* Im Mittelpunkt steht also nicht mehr die Prozesse als solche,
-  sondern der zu liefernde Service.
-
-
-
-## ITIL v3
-
-* Good Practice Framework
-* Öffentlich Zugänglich, seit Ende 80er Jahre entwickelt, besteht heute aus 5 Kern-"Büchern"
-* ITIL beschreibt die Prozesse, die einen effektiven und effizienten Betrieb der gesamten IT-Infrastruktur ermöglichen
-
-
+* Der Service Lifecycle beschreibt den Lebenszyklus des IT-Services von der Erfassung der Anforderung über die Gestaltung, Implementierung und den Betrieb bis hin zur kontinuierlichen Anpassung der Servicequalität und letztlich der Außerbetriebnahme. Im Mittelpunkt steht also nicht mehr die Prozesse als solche, sondern der zu liefernde Service.
 
 ## Service Lifecycle
 
+ITIL ist um den Service Lifecycle herum organisiert, welcher die Prozessgruppen beinhaltet. Die Prozessgruppen sind weiter unten beschrieben.
+
 ![1542631301540](assets\1542631301540.png)
 
-## Prozessgruppen im Überblick
+# Prozessgruppen im Überblick
 
-### Service Strategy
+
+
+## Phasenmodell
+
+Der Service Lifecycle beinhaltet diese Phasen (Phasenmodell):
+
+![1547908763866](assets/1547908763866.png)
+
+
+
+## Service Strategy
 
 * Ausgangspunkt für alle Aktivitäten im Lifecycle
 * Führt ITSM als organisatorische Fähigkeit und deren strategischen Wert
@@ -43,7 +58,7 @@
 * Ziele identifizieren, neue Chances und Möglichkeiten neuer IT Services
 * Kosten & Risiken des Service Portfolio betrachen
 
-#### Wichtige Fragen
+### Wichtige Fragen
 
  * Welche Services sollen wem angeboten werden?
  * Wie unterscheiden wir uns vom Wettbewerb?
@@ -52,7 +67,7 @@
  * Wie finden wir den richtigen Weg zur Serviceoptimierung?
  * Wie gestalten wir die Services wirtschaftlich?
 
-#### Prozesse
+### Prozesse
 
  * Strategy Management for IT-Services
  * Service Portfolio Management
@@ -60,46 +75,44 @@
  * Demand Management
  * Business Relationship Management
 
-### Service Design
+## Service Design
 
-Beschreibt den Entwurf und Entwicklnug von IT Services.
+Beschreibt den Entwurf und Entwicklung von IT Services.
 
 Aktivitäten:
 
- Planung und Gestaltung neuer und veränderter Services
- Service-Management-Systeme und Tools, wie Service
-Portfolio und Servicekatalog
- Planung und Gestaltung von Technologie und Architektur
- Planung und Gestaltung der benötigten Prozesse
- Planung und Gestaltung von Messmethoden und
-Metriken
+* Planung und Gestaltung neuer und veränderter Services
+* Service-Management-Systeme und Tools, wie Service Portfolio und Servicekatalog
+* Planung und Gestaltung von Technologie und Architektur
+* Planung und Gestaltung der benötigten Prozesse
+* Planung und Gestaltung von Messmethoden und Metriken
 
-#### Prozesse
+### Prozesse
 
- Design Coordination
- Service Catalogue Management
- Service Level Management
- Availability Management
- Capacity Management
- Information Security Management
- IT Service Continuity Management
- Supplier Management
+* Design Coordination
+* Service Catalogue Management
+* Service Level Management
+* Availability Management
+* Capacity Management
+* Information Security Management
+* IT Service Continuity Management
+* Supplier Management
 
-### Service Transition
+## Service Transition
 
 Beschreibt kontrollierte Überführung von neuen und geänderten IT-Services in den IT-Betrieb:
 
 * Stellt eine Anleitung und Prozessaktivitäten für den Übergang der Services in die Business-Umgebung bereit
 * Behandelt auch Themen wie Veränderungen der Unternehmenskultur, Wissens- und Risikomanagement
 
-#### Wichtige Aufgaben und Ziele sind:
+### Wichtige Aufgaben und Ziele sind:
  * Erkennen und Steuern der Kundenerwartungen bezüglich neuer und geänderter Services.
  * Übereinstimmung neuer oder geänderter Services mit den in den Service Requirements spezifizierten Anforderungen und Sachzwängen
  * Integration neuer oder geänderter Services in den BusinessProzess des Kunden
  * Serviceveränderungen werden in Bezug auf Kosten, Zeit und Qualität überwacht und gesteuert
  * Die effektive Umsetzung der definierten Servicestrategie in den Betrieb der Services ist sichergestellt
 
-#### Prozesse
+### Prozesse
 
  * Transition Planning & Support
  * Change Management
@@ -109,13 +122,11 @@ Beschreibt kontrollierte Überführung von neuen und geänderten IT-Services in 
  * Change Evaluation (*"Qualitätsmanagement des Service Transition"*)
  * Knowledge Management
 
-### Service Operation
+## Service Operation
 
 Beschreibt den effizienten und effektiven **Betrieb**, **Support** und **Unterhalt** der IT-Services
 
-
-
-#### Aufgaben und Ziele
+### Aufgaben und Ziele
 
 Monitoring und Reporting zur optimierten Entscheidungsfindung
 beim Steuern von Verfügbarkeit, Nachfrage, Kapazität und aller
@@ -126,17 +137,15 @@ Verbesserungsprozess
 • Sicherstellen der Verfügbarkeit und Stabilität der Services
 • Bearbeiten und Beseitigen von Incidents und Problems
 
-#### Prozesse
+### Prozesse
 
- Event Management (Monitoring)
- Incident Management
- Problem Management *(Probleme, die immer wieder auftreten)*
- Request Fullfilment *(Benutzeranfragen erledigen, z.B. Könnt ihr mir ein File restoren)*
- Access Management *(AuthZ)*
+* Event Management (Monitoring)
+* Incident Management
+* Problem Management *(Probleme, die immer wieder auftreten)*
+* Request Fullfilment *(Benutzeranfragen erledigen, z.B. Könnt ihr mir ein File restoren)*
+* Access Management *(AuthZ)*
 
-
-
-#### Funktionen
+### Funktionen
 
 Sind nicht Prozesse; sondern OEs - diese verwenden die oben geführten Prozessen.
 
@@ -145,17 +154,85 @@ Sind nicht Prozesse; sondern OEs - diese verwenden die oben geführten Prozessen
 * IT-Operations Management
 * Application Management
 
-
-
-## Zielkonflikte Service Operation
+### Zielkonflikte Service Operation
 
 ![1542632338636](assets\1542632338636.png)
 
-
-
 Ein Serviceprovider muss den IT-Betrieb so ausrichten, dass er eine akzeptierte Balance zwischen Stabilität und Reaktionsfähigkeit findet.
 
-## Service Asset & Configuration Management
+
+
+## Continual Service Improvement
+
+> Continual Service Improvement (CSI) ist im Kern ein Qualitätsmanagement für die angebotenen Services und die Service Management Prozesse.
+
+Qualitätsmanagement für die Service Management Prozesse
+
+### Ziel
+
+Die Effektivität und Effizienz der IT-Services und der Service Mgmt. Prozesse kontinuierlich zu verbessern.
+
+Folgende Voraussetzungen müssen erfüllt sein:
+• Die Ergebnisse des Service Level Mgmt. sind betrachtet und analysiert.
+• Benötigte Anpassungen zur Verbesserung der IT-Servicequalität
+sowie der Prozesseffizienz und -effektivität sind identifiziert und
+implementiert.
+• Die Balance zwischen wirtschaftlicher Erbringung der IT-Services und
+Kundenzufriedenheit ist gewährleistet und wird ständig verbessert.
+
+### Prozesse
+
+CSI hat genau 1 Prozess:
+
+- 7-Step Service Improment
+
+### Methoden
+
+- Service Reporting
+- Service Measurement
+
+### "Demming" Zyklus
+
+![1543236552138](../ITIL%20(07%20-%2009)/assets/1543236552138.png)
+
+- **Plan**: Ziele & Massnahmen erstellen, Rollen und Verantwortlichkeiten definieren
+- **Do**: Umsetzung und Dokumentation
+- **Check**: Messdaten erhoben und in Reports zusammengefasst
+- **Act**: Abweichungen identifizieren, Korrekturmassnahmen, Input für neue Planungsphase (**Plan**)
+- **Control**:  Erstreckt sich über alle Phasen, stellt sicher dass die definierten Aufgaben und Aktivitäten sowie Ergebnisse dokumentiert werden
+
+### 7-Step Prozess
+
+"Aufgeblasener Demming Zyklus"
+
+**Könnte Prüfungsrelevant sein**
+
+![1543237612532](../ITIL%20(07%20-%2009)/assets/1543237612532.png)
+
+
+
+### Methoden des CSI
+
+#### Service Measurement
+
+- Notwendig, IT-Services strukturiert messen
+- 2 Aspekte: Verfügbarkeit, Performance (Antwortzeiten)
+  - Wichtig: End2End Betrachtung
+
+#### Service Reporting
+
+- Reporting; Pro Service - Aussage über Performance und Verfügbarkeit
+- Empfänger: Business, IT-Management, IT-interne Stellen
+
+### KPI
+
+Reifegrad (0 - 5)
+
+![1543237943600](assets/1543237943600.png)
+
+# ITIL-Prozesse
+
+## Prozess: Service Asset & Configuration Management
 
 > Das Service Asset und Konfiguration Management (SACM) hilft den Überblick darüber zu behalten, welches Equipment vorhanden ist, wo es ist und wofür es verwendet wird.
 
@@ -183,11 +260,9 @@ SACM Prozess:
 
 ![1542635039786](assets\1542635039786.png)
 
+### Terminologie
 
-
-## Terminologie
-
-### CI - Configuration Item
+#### CI - Configuration Item
 
 > Ein CI ist eine IT-Komponente, welche unter der Kontrolle des Configuration Managements steht. Alle CIs stehen unter der Kontrolle des Change
 > Managements. 
@@ -221,30 +296,26 @@ schnell identifiziert werden. Neben den üblichen Bezeichnungen des Gerätes
 und der Kategorie (PC, Drucker, Monitor) gehören auch geräte-spezifische
 Informationen dazu.
 
-
-
-### CMDB / CMS
+#### CMDB / CMS
 
 * Applikation, welche die Daten verwaltet
-*  Die CMDB verwaltet Daten, die in mehr als einem Systems Management Bereich
+* Die CMDB verwaltet Daten, die in mehr als einem Systems Management Bereich
   bzw. mehr als einem Prozess benutzt werden, in einer (möglicherweise
   föderierten) Datenbank und stellt diese Daten über definierte Schnittstellen zur
   Verfügung.
-   Diese Configuration Management Database (CMDB) ermöglicht eine prozess- und
+* Diese Configuration Management Database (CMDB) ermöglicht eine prozess- und
   werkzeugübergreifende Informationsverarbeitung. Erst die integrative
   Beschreibung der Datenbestände und die Verknüpfung der Dateninseln
   ermöglichen durchgängige Betriebsprozesse.
-   Wesentliche Funktionen sind:
+* Wesentliche Funktionen sind:
   - Verwaltung Konfigurationseinheiten (CIs)
   - Versionierung sämtlicher Komponenten
   - Beschreibung des Zusammenspiels der einzelnen Komponenten, z.B. SW und Rechner
   - Journalisierung/Historisierung sämtlicher Änderungen auf Personen-Ebene 
 
-## Aufgabe 1
+#### Aufgabe 1
 
 In einem Asset- & Configuration System werden Hardware und Software «typisiert», sprich die einzelnen Geräte und auch die Software werden in Haupt- und Unterkategorien unterteilt, z.B. «Server» (Hauptkategorie) und «Linux», «Wintel» und «HP-UX» (Unterkategorie).
-
-
 
 Hardware:
 
@@ -257,8 +328,6 @@ Hardware:
   * Desktop
   * Laptop
 * ...
-
-
 
 Software:
 
@@ -276,11 +345,10 @@ Software:
   * Büro-Appl
   * Business-Appl
 
+### Rollen
 
+#### Configuration Manager (Process Owner)
 
-## Rollen
-
-### Configuration Manager (Process Owner)
 Der Configuration Manager ist als Process Owner ganzheitlich für den Erfolg des
 Configuration Management verantwortlich. Zu den Verantwortlichkeiten zählen:
  Planung und Überwachung der Aktivitäten im Configuration Management
@@ -293,28 +361,25 @@ Namenskonventionen, CI-Typen, Versionen, Templates)
  Pflege und Aktualisierung des CMS
  Reporting an andere Prozesse und an das Management
 
+#### Configuration Administrator
 
-
-### Configuration Administrator
 Inhaber dieser Rolle sind verantwortlich für
  die Durchführung der Pflegeaktivitäten im Service Asset and Configuration
 Management sowie
  für die Bereitstellung der Informationen und des Status der gespeicherten CI.
  Sie unterstützen den Configuration Manager bei der Pflege des Service-Asset-andConfiguration-Management-Planes
 
-### Datenverantwortlicher / Data Owner
+#### Datenverantwortlicher / Data Owner
+
 Die Daten werden an der Quelle aufgrund klar definierter Rollen und Autorisierungen
 erfasst. Für jede Entität ist ein Datenverantwortlicher bestimmt, der die Daten im Rahmen
 eines definierten Prozesses pflegt. Mehrfacherfassungen werden dadurch vermieden.
 
-### CMS Tools-Administrator
-Der CMS/Tools-Administrator ist verantwortlich für die
- Funktionsfähigkeit und Weiterentwicklung des CMS
- und die anforderungsgerechte Konfiguration der eingesetzten Tools.
+#### CMS Tools-Administrator
 
+Der CMS/Tools-Administrator ist verantwortlich für die Funktionsfähigkeit und Weiterentwicklung des CMS und die anforderungsgerechte Konfiguration der eingesetzten Tools.
 
-
-## KPI
+### KPI
 
 Folgende KPIs sind für das CM relevant:
 
@@ -331,9 +396,7 @@ Folgende KPIs sind für das CM relevant:
 
 ![1542637350098](assets\1542637350098.png)
 
-
-
-## Change Management
+## Prozess: Change Management
 
 CM kontrolliert:
 
@@ -438,20 +501,20 @@ Dies führt zum Abwägen zwischen Flexibilität und Stabilität:
 
 ![1542724938422](assets\1542724938422.png)
 
-# Software Deployment / Release Management
+## Prozess: Software Deployment / Release Management
 
-## Ziele
+### Ziele
 
 >  Erfolgreiche Integrationen von Releases in die geplante Zielumgebung unter Einhaltung der vorgegebenen Zeitplanung ohne Beeinträchtigung oder Störung des laufenden Betriebs.
 
-## Build
+### Build
 
 Ein Build kann alles zusammenfassen:
 
 * Änderungen, Ergänzungen, Neuerungen, Updates, Patches, Anpassungen dürfen nicht einfach ausgebreitet werden.
 * Planung, Integration, Tests, Kundenvorbereitung und diverse Randbedingungen müssen feste und stabile  Umgebungen gewährleisten.
 
-## Begriffe
+### Begriffe
 
 * **Release Unit**:
   * Getestete und ausgerollte Einheit
@@ -466,7 +529,7 @@ Ein Build kann alles zusammenfassen:
   * Täglich, wöchentlich, monatlich etc.
   * Kann zu oft erfolgen, zu viele kleine Änderungen (kann nervig sein)
 
-## Release- und Deployment-Modelle
+### Release- und Deployment-Modelle
 
 Modelle haben folgende Informationen:
 
@@ -481,7 +544,7 @@ Optionen:
 * **Push**: Aktive Verteilung mit "Zwang"; Rasche Verteilung; Oft Benutzerbeeinträchtigung
 * **Pull**: SW-Kiosk, evtl. fixer Endtermin, weniger Störungen des Benutzers durch Nutzung von Rand- oder Pausenzeiten
 
-## Rollen im R&D Management
+### Rollen
 
 * **Release & Deployment Manager**
   * Verantwortet Steuerung aller Aspekte des kompletten Release-Prozesses, sowie:
@@ -499,7 +562,7 @@ Optionen:
   * Dokumentation der Ereignisse sowie ggf. Known-Errors und Workarounds innerhalb eines Releases
   * Informationen für die Release-Freigabe
 
-## KPI im R&D
+### KPI
 
 Was bewirkten KPIs im R&D?
 
@@ -509,7 +572,7 @@ Was bewirkten KPIs im R&D?
 * Weniger Fehler bei der Release-Planung
 * Weniger Nachbesserungen pro Release
 
-## Herausforderungen
+### Herausforderungen
 
 Schnittstelle zum Change Management:
 
@@ -520,75 +583,90 @@ Schnittstelle zum Change Management:
 
 Unklare Voraussetzungen oder Erwartungen machen eine genaue Zielerfüllung unmöglich!
 
+## Prozess: Incident Management
+
+### Ziele
+
+> *Incident Management* verwaltet alle Incidents über ihren gesamten Lebenszyklus.  Das primäre Ziel dieses ITIL-Prozess besteht darin, einen IT Service für den Anwender so schnell wie möglich wieder herzustellen (Beims)
+
+- Auswirkungen von Störungen auf die Geschäftsprozesse verringern
+- Servicequalität und Verfügbarkeit einhalten
+- Steigerung der Produktivität der Anwender
+
+### Rollen
+
+#### Incident Manager
+
+Der Incident Manager ist verantwortlich für einen funktionierenden Prozess und stellt sicher, dass die Aktivitäten innerhalb dieses Prozesses effektiv und effizient erfolgen. Weitere Aufgaben des Incident Managers:
+
+* Erstellung und Weiterentwicklung des Incident-Management-Prozesses
+* Verantwortung für Auswahl und Integration benötigter Werkzeuge
+* Management Reporting
+* Steuerung des Beitrages der am Incident-Management-Prozess beteiligten Support-Teams (1st Line, 2nd Line…)
+* Überwachung der Effektivität des Prozesses und Ableiten von Vorschlägen zur kontinuierlichen Verbesserung
+* Steuerung der Durchführung von Major Incidents
+* Eskalationsinstanz für die beteiligten Mitarbeiter
+
+(aus Beims übernommen)
+
+#### 1st Line Support (Service Desk)
+
+Diese Rolle ist verantwortlich für die Bereitstellung des 1st Line Support durch die **Annahme** und **Bearbeitung von Anrufen und Meldungen** entsprechend den in den Prozessen Incident Management und Request Fulfilment definierten Aktivitäten.
+
+(aus Beims übernommen)
+
+#### 2nd Line Support
+
+Die **Spezialisten** und Teams der Fachgruppen, die über ausgeprägte **Fachkenntnisse** zu einem bestimmten Thema verfügen, übernehmen die Rolle des 2nd Line Support und sind die Adressaten der ersten Stufe einer funktionalen Eskalation. Sie bearbeiten die weitergeleiteten Tickets gemäß entsprechenden Vereinbarungen in Operational Level Agreements.
+
+(aus Beims übernommen)
+
+#### 3rd Line Support
+
+Auf der Ebene des 3rd Line Support werden weiter spezialisierte Teams zur Bearbeitung der Tickets hinzugezogen. Je nach Aufbau der Organisation und Gestaltung des 2nd Line Support kann es sich hierbei um Fachteams aus den Funktionen Technical- und Application Management handeln. In den meisten Unternehmen wird der 3rd Line Support jedoch bereits vom externen Dienstleister oder vom jeweiligen Hersteller durchgeführt.
+
+(aus Beims übernommen)
+
+### KPI
+
+Einige Beispiele für mögliche Kennzahlen, mit deren Hilfe sich die Prozessqualität und der Beitrag zu den IT-Zielen messen lassen:
+
+* Incidents je Arbeitsschritt (erfasst, in Arbeit, geschlossen)
+* Größe des aktuellen Backlogs (absolut oder prozentual)
+* Anzahl Major Incidents/Anzahl Incidents
+* Anteil der innerhalb der SLAs behobenen Störungen
+* Durchschnittliche Kosten pro Incident
+* Anteil der Incidents, die erneut geöffnet wurden
+* Anteil falsch kategorisierter oder falsch zugewiesener Incidents
+* Erstlösungsrate
+* Anteil der Incidents, die remote behoben werden konnten
+* Aufschlüsselung der Incidents nach Arbeitszeiten
+
+(aus Beims übernommen)
+
+### Herausforderungen
+
+* Zeit bis man einen Incident entdeckt (umso früher, umso besser). Am besten noch bevor die Anwender die Störung bemerken, beispielsweise mittels Monitoring.
+* Ein funktionierender Event Management Prozess muss Ereignisse & Meldungen filtern und mögliche Incidents identifizieren. Die **Schnittstelle** zwischen Event- und Incident Management ist somit sehr wichtig.
+* Informationen aus Problem Management, insb. Known Errors und Workarounds, müssen zur Verfügung stehen. Dies ermöglicht es Support-Mitarbeitern, aus vergangenen Incidents zu lernen und die bereits ausgearbeitet Workarounds anzuwenden.
+* Configuration Management System sollte sinnvollerweise eingebunden werden. Somit können Configuration Items (CI), welche zu einem Service gehören, automatisch in Beziehung gebracht werden. Wichtig für die Priorisierung des Incidents.
+* Kenntnis der SLA ist wichtig für die Priorisierung des Incidents.
+
+### Aktivitäten (Input für Support)
+
+![1547909252460](assets/1547909252460.png)
+
+### Support Levels
+
+![1547909282117](assets/1547909282117.png)
+
+### Support Eskalation
+
+![1547909317551](assets/1547909317551.png)
 
 
-# Continual Service Improvement
 
-> Continual Service Improvement (CSI) ist im Kern ein Qualitätsmanagement für die angebotenen Services und die Service Management Prozesse.
+### Priorisierung
 
-Qualitätsmanagement für die Service Management Prozesse
-
-## Ziel
-
-Die Effektivität und Effizienz der IT-Services und der Service Mgmt. Prozesse kontinuierlich zu verbessern.
-
-Folgende Voraussetzungen müssen erfüllt sein:
-• Die Ergebnisse des Service Level Mgmt. sind betrachtet und analysiert.
-• Benötigte Anpassungen zur Verbesserung der IT-Servicequalität
-sowie der Prozesseffizienz und -effektivität sind identifiziert und
-implementiert.
-• Die Balance zwischen wirtschaftlicher Erbringung der IT-Services und
-Kundenzufriedenheit ist gewährleistet und wird ständig verbessert.
-
-## Prozesse
-
-CSI hat genau 1 Prozess:
-
-- 7-Step Service Improment
-
-## Methoden
-
-- Service Reporting
-- Service Measurement
-
-## "Demming" Zyklus
-
-![1543236552138](assets\1543236552138.png)
-
-* **Plan**: Ziele & Massnahmen erstellen, Rollen und Verantwortlichkeiten definieren
-* **Do**: Umsetzung und Dokumentation
-* **Check**: Messdaten erhoben und in Reports zusammengefasst
-* **Act**: Abweichungen identifizieren, Korrekturmassnahmen, Input für neue Planungsphase (**Plan**)
-* **Control**:  Erstreckt sich über alle Phasen, stellt sicher dass die definierten Aufgaben und Aktivitäten sowie Ergebnisse dokumentiert werden
-
-## 7-Step Prozess
-
-"Aufgeblasener Demming Zyklus"
-
-**Könnte Prüfungsrelevant sein**
-
-![1543237612532](assets\1543237612532.png)
-
-
-
-## Methoden des CSI
-
-### Service Measurement
-
-* Notwendig, IT-Services strukturiert messen
-* 2 Aspekte: Verfügbarkeit, Performance (Antwortzeiten)
-  * Wichtig: End2End Betrachtung
-
-### Service Reporting
-
-* Reporting; Pro Service - Aussage über Performance und Verfügbarkeit
-* Empfänger: Business, IT-Management, IT-interne Stellen
-
-
-
-### KPIs in CSI
-
-Reifegrad (0 - 5)
-
-![1543237943600](assets\1543237943600.png)
+![1547909349220](assets/1547909349220.png)
 
