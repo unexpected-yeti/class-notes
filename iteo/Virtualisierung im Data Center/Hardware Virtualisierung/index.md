@@ -5,7 +5,28 @@ Privilegierte Instruktionen lösen einen Trap, in den Kernel (Supervisor Modus),
 [https://en.wikipedia.org/wiki/Protection\_ring](https://en.wikipedia.org/wiki/Protection_ring)
 CPL (current privilege level) -\> 2bit = 4 Privilegien = 4 Sicherheitsringe
 
-![](DraggedImage.png)![](DraggedImage-1.png)![](DraggedImage-2.png)
+![](DraggedImage.png)![](DraggedImage-1.png)
+
+## Memory Rückgewinnungstechniken
+
+
+
+Memory Rückgewinnungstechniken werden benötigt, da der Hypervisor in der Regel den Arbeitsspeicher dem VMs overcommitted: Er stellt mehr Arbeitsspeicher zur Verfügung als er eigentlich hat. Um dies zu bewerkstelligen, benötigt er Rückgewinnungstechniken.
+
+* **Page Sharing**: In homogenen Gastsystem finden sich viele identische Pages (z.B. bei mehreren Windows 10 VMs gibt es viele Pages die immer gleich sind, diese können somit geshared werden)
+* **Page Patching**: Fast gleiche / ähnliche Pages gibt es viele. Daher werden inkrementell nur Änderungen gespeichert.
+* **Page Compression**: Viele Pages die in naher Zukunft nicht mehr verwendet werden (reduziert die Anzahl paging requests)
+* **Memory Ballooning**: 
+  * Benötigt einen Treiber im Gast-OS (Balloon-Treiber)
+  * Wenn der Hypervisor Memory benötigt, instruiert er den Balloon-Treiber in einer Gast-VM sich "aufzublasen". Dabei übergibt der Hypervisor die gewünschte Grösse des Speichers resp. die Anzahl der Memory Pages die er gerne hätte.
+  * Der Balloon-Treiber fordert dann Speicher vom Gast-OS an (in der gewünschten Anzahl Pages) und markiert diese (sofern sie frei sind!). Danach informiert der Treiber den Hypervisor, dass er diese Pages verwenden kann.
+  * Frage: was ist genau paged out?
+  * Möchte das Gast-OS trotzdem auf diese Pages zugreifen, so handelt das der Hypervisor als regulären Memory Request / Allocation ab.
+  * Wenn der Hypervisor entscheidet, dass die Balloon-Grösse verringert werden kann, übergibt er dem Balloon-Treiber die neue Grösse und der Treiber hebt darauf hin die Markierung auf.
+  * https://www.youtube.com/watch?v=mxproh2qaU8
+
+
+![](DraggedImage-2.png)
 
 Warum Memory Rückgewinnung:
 - Viel redundantes z.B. Kernel, Systemdateien, usw.
