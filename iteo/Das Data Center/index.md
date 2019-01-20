@@ -139,6 +139,56 @@ Data Center Tiers ist ein standartisiertes Ranking von Uptime Institute für die
 | Tier 3      | N+1       | 1.6h                  | 99.98%        |
 | Tier 4      | 2(N+1)    | 0.8h                  | 99.99%        |
 
+## Information Life Cycle (ILM)
+
+Speicherung von Informationen aufgrund ihres Wert auf dem jeweils günstigsten Speichermedium. Der Mechanismus orientiert sich an:
+
+* Wichtigkeit
+* Wertigkeit
+* Kosten der Information
+
+![1547990717790](assets/1547990717790.png)
+
+Regeln legen fest, wo die Daten gespeichert werden:
+
+- Änderungshäufigkeit
+- Zugriffsgeschwindigkeit
+- Zugriffshäufigkeit
+- Kosten
+- Ökonomischer Wert
+- Relevante gesetzliche Bestimmungen
+
+![1547990772965](assets/1547990772965.png)
+
+### Daten-Charakteristik um sinnvolle Architektur aufzubauen
+
+Charakteristik:
+
+1. Mission Critical Data
+2. Business Critical Data
+3. Nearline / Historical Data
+4. Offline Data
+
+**Records Management** (ISO 15489 = wie lange Dateien mit einem bestimmten Inhalt aufbewahrt werden müssen:
+
+- Aufbewahrungszeit (gesetzlich, intern)
+- Ablageordnung, Namensgebung, Versionen
+- Automatische Routinen zum Löschen
+
+![1547990857749](assets/1547990857749.png)
+
+Daten einem Tier zuordnen:
+
+![1547990876354](assets/1547990876354.png)
+
+SLA:
+
+![1547990890260](assets/1547990890260.png)
+
+## Allocation vs. Utilization efficiency
+
+![1547990915448](assets/1547990915448.png)
+
 # Netzwerke im Data Center
 
 ## Wichtige Begriffe im RZ-Netzwerkbereich
