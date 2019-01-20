@@ -217,9 +217,7 @@ Es gibt diverse Bereiche, welche virtualisiert werden:
 
 #### Wie geht Intel das Problem an, damit die *direct execution* realisiert werden kann?
 
-Mittels Intel VT-d: 
-
-
+Mittels Intel VT-d (siehe oben).
 
 #### Was ist eine Virtualisation?
 
@@ -231,8 +229,6 @@ Einfacher ausgedrückt: *Virtualität* spezifiziert also eine gedachte oder übe
 
 **Virtualisierung** (in der Informatik) bezieht sich auf den Vorgang der Erstellung einer virtuellen (also nicht tatsächlichen) Version von *etwas*, wie z.B. virtuelle Hardware-Plattform, Betriebssystem oder Netzwerk-Ressourcen (z.B. SDN)
 
-
-
 #### Welche Herausforderungen muss eine VMM lösen können?
 
 Die VMM muss ...:
@@ -241,34 +237,6 @@ Die VMM muss ...:
 * sollte den Software-Stack der Gästen gegenüber anderen Gästen **isolieren**
 * sollte gegenüber anderen Gast-Systemen **geschützt** laufen
 * eine virtuelles Plattform Interface gegenüber den Gast-Systemen präsentieren
-
-#### Wo werden im Hardware-unterstützten x86 Sicherheitsmodell der Kern, Hypervisor und die Applikation ausgeführt?
-
-#### Nenne Sie die Gründe für die Hardware-Virtualisierung
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ### Emanuel
 
