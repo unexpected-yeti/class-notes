@@ -86,3 +86,6 @@ Docker ist eine Applications-Engine basierend auf Containern. Docker verwendet d
 
 ![](DraggedImage-4.png)![](DraggedImage-5.png)![](DraggedImage-6.png)
 
+Lifecycle:
+
+![Bildergebnis fÃ¼r docker image lifecycle](assets/B04534_01_06.png)

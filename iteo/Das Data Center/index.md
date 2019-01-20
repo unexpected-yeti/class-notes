@@ -7,6 +7,26 @@
 * Daten Klassifizierung und deren Einbindung in ein SLA
 * Data-Tiers und deren Aufgaben erklären
 
+## Stoffabgrenzung
+
+### 02 Data Center
+
+* Sie kennen die Building Blocks eines Datacenters
+* Sie sind fähig die kritischen Punkte eines Datacenters zu adressieren und Massnahmen vorzuschlagen
+* Sie kennen die Technologien und Tiers eines Datacenters
+* Sie können die Anwendung eines Failover Datacenters aufzeichnen und erklären
+* Sie wissen wie man Daten klassifiziert und sie in SLAs einbindet
+* Sie sind in der Lage Data-Tiers und deren Aufgaben zu erklären. 
+
+### 03 Netzwerke im Datacenter
+
+* Sie können die Anforderungen an ein RZ-Netzwerk definieren und erklären
+* Sie sind fähig die kritischen Punkte eines RZ-Netzwerks zu adressieren und vorbeugende Massnahmen vorzuschlagen
+* Sie kennen die grundlegenden Topologien im RZ-Netzwerk
+* Sie kennen die wichtigsten Begriffe im RZ-Netzwerkbereich
+
+
+
 ## Building Blocks
 * Gebäude
 * Zutrittskontrolle
@@ -31,7 +51,7 @@
   - Glas
 * Administration und Überwachung
 
-## Gefährdungen und deren Massnahmen
+## Kritische Punkte: Gefährdungen und deren Massnahmen
   * Gebäude
     - Einbruch, Diebstahl, Vandalismus, Sturmschäden, Witterung
     - bauliche Massnahmen
@@ -47,7 +67,7 @@
   * Klimatisierung
     - Staub, Schmutz, Wasser
     - Filteranlagen, Schleusen, Standortwahl, Abschottungen, Pumpenanlagen
-  
+
 ## Prävention von Gefährdungen durch Überwachung
   * Gebäude
     - Türen (offen, zu, verschlossen), Kameras, Bewegungsmelder, Zutritte
@@ -64,6 +84,7 @@
   * USV
     - Ladezustand und Batterietemperatur
   *  Brandmelde- und Löschanlage
+
     - Zustandsanzeigen, Service
 
 ## Effizienz eines Data Centers
@@ -77,7 +98,7 @@ Grössenordnungen:
   * 1.0: optimal, kein Energieaufwand für Kühlung nötig
   * 1.2: gut, normaler Bereich
   * \>1.4: schlecht
-  
+
 ## Verfügbarkeit eines Data Centers
 
 ### Verfügbarkeit im SLA
@@ -118,7 +139,131 @@ Data Center Tiers ist ein standartisiertes Ranking von Uptime Institute für die
 | Tier 3      | N+1       | 1.6h                  | 99.98%        |
 | Tier 4      | 2(N+1)    | 0.8h                  | 99.99%        |
 
+## Information Life Cycle (ILM)
+
+Speicherung von Informationen aufgrund ihres Wert auf dem jeweils günstigsten Speichermedium. Der Mechanismus orientiert sich an:
+
+* Wichtigkeit
+* Wertigkeit
+* Kosten der Information
+
+![1547990717790](assets/1547990717790.png)
+
+Regeln legen fest, wo die Daten gespeichert werden:
+
+- Änderungshäufigkeit
+- Zugriffsgeschwindigkeit
+- Zugriffshäufigkeit
+- Kosten
+- Ökonomischer Wert
+- Relevante gesetzliche Bestimmungen
+
+![1547990772965](assets/1547990772965.png)
+
+### Daten-Charakteristik um sinnvolle Architektur aufzubauen
+
+Charakteristik:
+
+1. Mission Critical Data
+2. Business Critical Data
+3. Nearline / Historical Data
+4. Offline Data
+
+**Records Management** (ISO 15489 = wie lange Dateien mit einem bestimmten Inhalt aufbewahrt werden müssen:
+
+- Aufbewahrungszeit (gesetzlich, intern)
+- Ablageordnung, Namensgebung, Versionen
+- Automatische Routinen zum Löschen
+
+![1547990857749](assets/1547990857749.png)
+
+Daten einem Tier zuordnen:
+
+![1547990876354](assets/1547990876354.png)
+
+SLA:
+
+![1547990890260](assets/1547990890260.png)
+
+## Allocation vs. Utilization efficiency
+
+![1547990915448](assets/1547990915448.png)
+
 # Netzwerke im Data Center
+
+## Wichtige Begriffe im RZ-Netzwerkbereich
+
+* VLAN
+  * Bildung von getrennten Netzen auf gemeinsamer Hardware
+  * Virtual LAN
+  * Tagged oder Untagged
+  * Trunks (immer tagged) (mehrere VLANs)
+  * Access Port (norm. 1 VLAN) 
+* DNS: Domain Name System: Zuordnung von IP Adr. zu DNS-Namen
+* IPAM: IP Address Management (MS Service oder separate Verwaltungstools) 
+* DHCP (Dynamic Host Configuration Protocol): Dynamische oder reservierte Zuweisung von IP-Adressen und weiteren Eigenschaften an einen TCP/IP-Client
+* NAP (network access protection)
+* NAC (network access control): Qualifizierung des Clients anhand von verschiedenen Parametern (User, OS, Version, AntiVir, …) - Zuordnung zu den erlaubten Netzwerken oder nur zur Quarantäne Zone
+
+## Topologien im RZ
+
+### Physikalisch
+
+* Top of Rack (TOR): jedes Rack hat eigene Switches
+* End of Row (EOR): Racks nur über Patchpanels verbunden
+
+| Top of Rack (TOR)                                   | End of Row (EOR)                                             |
+| --------------------------------------------------- | ------------------------------------------------------------ |
+| + Redundanz bei Stromunterbruch in einem Rack       | + Aktivkomponenten sind in einem Rack                        |
+| - Platzbedarf muss genau kalkuliert werden pro Rack | - Bei Stromunterbruch im Rack der Komponenten sind alle Aktivkomponenten offline |
+
+### LAN Strukturen (einfach)
+
+* Peering / Peripherie (Anschluss nach aussen, z.B. zu einem Upstream Provider zum Internet)
+* Backbone / Spine / Core (Rückgrat, zentrales Netz)
+* Leaf (Anschlüsse für Server)
+
+
+
+![1547916450839](assets/1547916450839.png)
+
+
+
+### RZ Topologie
+
+* Core (Zentrale Verbindungen, auch RZ zu RZ)
+* Aggregation (Direkte Verbindungen von Serverfarmen)
+* Access (Zugangspunkt für physikalische Server und Komponenten)
+
+![1547916562575](assets/1547916562575.png)
+
+### Multiprotocol Label Switching (MPLS)
+
+- VPN ähnliche Struktur zur Verbindung zusammengehöriger Netzwerk
+- Kann von Provider (Swisscom) zur Verfügung gestellt werden um zum Beispiel das RZ von Sursee direkt mit dem RZ in Sempach zu verbinden
+- IP-Paket erhält zusätzlichen MPLS Header
+
+![1547916760852](assets/1547916760852.png)
+
+
+
+
+
+## Kritische Punkte eines RZ-Netzwerks
+
+* Single Point of Failure
+  * WAN (Internetanbindung nach aussen)
+  * Verkabelung / Hardware
+  * Router, Firewall, etc.
+* Abhilfe: Monitoring, Redundanz etc.
+
+## Topologie
+
+1. Provider (Angebot, Speed, Technik)
+2. Grenze (Router, Firewall, IDP, Redundanz)
+3. DMZ (Web-Services, Authentifizierung, Dienste)
+4. Lokales Netzwerk, LAN (Topologien, Speed, Trennung, Services)
+
 ## Internet Service Providers
 Techniken und deren Geschwindigkeiten:
 - ADSL (Asymmetric Digital Subscriber Line) mit \~2-16 Mbit/s *(Upstream \~10% des Downstreams)*
@@ -142,7 +287,7 @@ Mit Intrusion Detection Systemen (IDS) und Intrusion Prevention Systemen (IPS) v
 Geschützter Bereich, in welchen bestimmte Zugriffe erlaubt werden (WWW, Mail, FTP, …). Bei 2 Schritten (DMZ Model 2) können verschiedene Hersteller
 und Gerätetypen verwendet werden, was die Sicherheit vor Hackern erhöht. 
 (img)
- 
+
 ## Netzwerk Redundanz und weiteres nicht gemacht
 
 
