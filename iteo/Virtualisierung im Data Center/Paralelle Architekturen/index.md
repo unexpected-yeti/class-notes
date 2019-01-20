@@ -102,7 +102,14 @@ Koppelnetze (Crossbar Switch) sind nicht blockierend, da jeder Punkt mit jedem a
 
 ## Cachekohärenz
 
-**Problem**: Ein Prozess weiss nicht, ob der Wert in seinem Cache noch aktuell ist oder bereits von einem anderen Prozess geändert wurde. Durch Sicherstellung der Cache-Kohärenz wird bei Mehrprozessorensystemen mit mehreren CPU-Caches verhindert, dass einzelne Caches für dieselbe Speicheradresse unterschiedliche (somit inkonsistente) Daten zurückliefern.
+**Problem**: Ein Prozessor weiss nicht, ob der Wert in seinem Cache noch aktuell ist oder bereits von einem anderen Prozess geändert wurde. Durch Sicherstellung der Cache-Kohärenz wird bei Mehrprozessorensystemen mit mehreren CPU-Caches verhindert, dass einzelne Caches für dieselbe Speicheradresse unterschiedliche (somit inkonsistente) Daten zurückliefern.
+
+![1547990005309](assets/1547990005309.png)
+
+Siehe auch:
+
+* [Problembeschreibung](https://www.youtube.com/watch?v=TMJj015C93A)
+* [More](https://www.youtube.com/watch?v=0F7TA1Scp8s)
 
 Eine temporäre Inkonsistenz zwischen Speicher und Cache ist zulässig, sofern diese spätestens bei lesenden Zugriffen identifiziert und behoben wird. Inkonsistenzen werden z.B. durch das Rückschreibeverfahren (Write-Back) erzeugt, das im Gegensatz zu einem Durchschreibeverfahren (Write-Through) beim Schreiben in den Cache-Speicher nicht sofort den Hauptspeicher aktualisiert. Vergleiche dazu [Cache-Konsistenz](https://de.wikipedia.org/wiki/Cache-Konsistenz)
 

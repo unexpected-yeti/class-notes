@@ -9,3 +9,4 @@
 * Sie kennen die Anforderungen an ein modernes Filesystem und können dessen Konzepte erklären.
 * Sie verstehen die Rolle eines Docker Images und dessen Lebenszyklus
 * Sie haben die Übungen gemacht und können diese beschreiben und erklären
+
