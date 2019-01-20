@@ -11,22 +11,25 @@
 
 ## IT-Betrieb im Unternehmen
 
-### Aufgabe 2 (Im Unterricht)
+### Anforderungen an einen modernen IT-Dienstleister
 
-- Zugang zum internationalen Börsenverkehr
-- Hochverfügbares IT-System
-- Effiziente Arbeitsmittel (Bildschirme, Tastaturen, etc.)
-- Tiefe Latenzen bei Börseninformationen
-- Controlling / Aufsichtsprozesse
-
-### Aufgabe 3 - Laptop/PC Unterhalt (Im Unterricht)
-
-- CCleaner
-- Backup/Restore
-- Updates
-- Akku laden
+* Über die letzten Jahre hinweg entwickelten sich IT Abteilungen immer mehr zu einem Dienstleister (innerhalb oder außerhalb des Unternehmens), der die Arbeit der Fachbereiche der jeweiligen Organisation möglichst effektiv und effizient unterstützen soll
+* Dadurch entsteht eine Reihe von Anforderungen an den IT Dienstleister
+  * Die Dienstleistungen leiten sich aus den Anforderungen des Geschäfts ab
+  * Die Dienstleistungen müssen einen qualifizierbaren und quantifizierbaren Mehrwert liefern.
+  * Auf die Wünsche und Anforderungen des Kunden muss flexibel  eingegangen werden können
+  * Die Kunden müssen als Partner und nicht als Bittsteller behandelt
+    werden
+* Entsprechend wird ein IT Dienstleister gemessen an
+  - Der Qualität der erbrachten Dienstleistungen
+  - Leistungsfähigkeit, Zuverlässigkeit, Funktionalität
+  - Anpassungsfähigkeit, Reaktionszeit für die Bereitstellung neuer Services,
+    u.a.
+  - Der Wirtschaftlichkeit der erbrachten Dienstleistungen
 
 ## ITIL (IT Infrastructure Library)
+
+![1547991257481](assets/1547991257481.png)
 
 - Best Practice Framework um IT-Applikationen und Services zu managen
 - De facto standard
@@ -42,3 +45,9 @@
 * Elemente = Hardware, Software, Prozesse, Personen und Einrichtungen
 
 ![1541425017336](assets/1541425017336.png)
+
+
+
+## IT Service Management
+
+![1547991331779](assets/1547991331779.png)
