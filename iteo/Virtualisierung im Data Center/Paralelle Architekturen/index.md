@@ -195,6 +195,11 @@ Problem: 50% von der Prozessor Zeit ist Warten auf das Memory:
 
 
 
+* SMT erhöht die Zahl der Transistoren um 10%
+* CMP (Chip Multiprocessing) um 50%
+
+![1547989479521](assets/1547989479521.png)
+
 ## Shared Memory Architektur (UMA)
 
 ![1547982335069](assets/1547982335069.png)
