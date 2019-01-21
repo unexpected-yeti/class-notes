@@ -66,15 +66,15 @@ Im Mittelpunkt steht also nicht mehr der Prozess als solcher, sondern der zu lie
 
 
 
-![image](assets\1542013770240.png)
+![image](assets/1542013770240.png)
 
 
 
  ### Service Lifecycle
 
-![1542013859244](assets\1542013859244.png)
+![1542013859244](assets/1542013859244.png)
 
-![1542013953655](assets\1542013953655.png)
+![1542013953655](assets/1542013953655.png)
 
 ### Rollen im Lifecycle
 
@@ -192,9 +192,9 @@ Service Katalog ist ein Ausschnitt aus dem Service Portfolio, ist aktuell und be
 * **Business-Perspektive**: aus Sicht des Kunden
 * **Technische Perspektive**: Zeigt, aus welchen Komponenten und Services sich ein Business Service zusammensetzt
 
-![1542045694589](assets\1542045694589.png)
+![1542045694589](assets/1542045694589.png)
 
-![1542045715767](assets\1542045715767.png)
+![1542045715767](assets/1542045715767.png)
 
 
 
@@ -257,13 +257,13 @@ Design der Services erfolgt top-down, somit ist sichergestellt dass alle Aktivit
 
 Implementierung der Services erfolgt bottom-up, um die optimale Nutzung der vorhandenen Infrastruktur und Prozesse sicherzustellen
 
-![1542620822994](assets\1542620822994.png)
+![1542620822994](assets/1542620822994.png)
 
 
 
 ## Service Portfolio
 
-![1542620954756](assets\1542620954756.png)
+![1542620954756](assets/1542620954756.png)
 
 
 
@@ -311,7 +311,7 @@ Zuletzt gilt es sicherzustellen, dass die definierten Messmethoden und Metriken 
 
 Service Design befasst sich neben Gestaltung der Services auch mit dem Design der Prozesse. ITIL kennt das folgende, generische Prozessmodell:
 
-![1542621467356](assets\1542621467356.png)
+![1542621467356](assets/1542621467356.png)
 
 
 

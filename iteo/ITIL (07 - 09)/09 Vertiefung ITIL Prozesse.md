@@ -36,7 +36,7 @@
 
 ITIL ist um den Service Lifecycle herum organisiert, welcher die Prozessgruppen beinhaltet. Die Prozessgruppen sind weiter unten beschrieben.
 
-![1542631301540](assets\1542631301540.png)
+![1542631301540](assets/1542631301540.png)
 
 # Prozessgruppen im Überblick
 
@@ -156,7 +156,7 @@ Sind nicht Prozesse; sondern OEs - diese verwenden die oben geführten Prozessen
 
 ### Zielkonflikte Service Operation
 
-![1542632338636](assets\1542632338636.png)
+![1542632338636](assets/1542632338636.png)
 
 Ein Serviceprovider muss den IT-Betrieb so ausrichten, dass er eine akzeptierte Balance zwischen Stabilität und Reaktionsfähigkeit findet.
 
@@ -258,7 +258,7 @@ Bereitstellung von aktuellen und konsistenten Informationen
 
 SACM Prozess:
 
-![1542635039786](assets\1542635039786.png)
+![1542635039786](assets/1542635039786.png)
 
 ### Terminologie
 
@@ -394,7 +394,7 @@ Folgende KPIs sind für das CM relevant:
 
 
 
-![1542637350098](assets\1542637350098.png)
+![1542637350098](assets/1542637350098.png)
 
 ## Prozess: Change Management
 
@@ -463,7 +463,7 @@ Erweiterte Ziele:
 
 ### Ablauf
 
-![1542724649873](assets\1542724649873.png)
+![1542724649873](assets/1542724649873.png)
 
 ### Rollen
 
@@ -499,7 +499,7 @@ Die Ziele des CM:
 
 Dies führt zum Abwägen zwischen Flexibilität und Stabilität:
 
-![1542724938422](assets\1542724938422.png)
+![1542724938422](assets/1542724938422.png)
 
 ## Prozess: Software Deployment / Release Management
 
