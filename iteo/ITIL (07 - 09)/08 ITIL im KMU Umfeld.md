@@ -46,7 +46,7 @@ Oft wird das Modell um zwei Rollen zu RACI-VS erweitert:
 
 ### Einfaches generisches Prozessmodell
 
-![1542013055290](assets\1542013055290.png)
+![1542013055290](assets/1542013055290.png)
 
 
 
