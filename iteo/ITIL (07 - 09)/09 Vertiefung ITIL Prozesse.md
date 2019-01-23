@@ -193,7 +193,7 @@ CSI hat genau 1 Prozess:
 
 ### "Demming" Zyklus
 
-![1543236552138](../ITIL%20(07%20-%2009)/assets/1543236552138.png)
+![1543236552138](assets/1543236552138.png)
 
 - **Plan**: Ziele & Massnahmen erstellen, Rollen und Verantwortlichkeiten definieren
 - **Do**: Umsetzung und Dokumentation
@@ -207,7 +207,7 @@ CSI hat genau 1 Prozess:
 
 **Könnte Prüfungsrelevant sein**
 
-![1543237612532](../ITIL%20(07%20-%2009)/assets/1543237612532.png)
+![1543237612532](assets/1543237612532.png)
 
 
 

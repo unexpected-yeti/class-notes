@@ -255,6 +255,9 @@ Vorteile von SMP:
 ![](DraggedImage-4.png)
 
 ### Erklären sie die „superskalare Architektur“
+
+> Unter **Superskalarität** versteht man die Eigenschaft eines [Prozessors](https://de.wikipedia.org/wiki/Prozessor), mehrere Befehle aus einem Befehlsstrom gleichzeitig mit mehreren parallel arbeitenden Funktionseinheiten zu verarbeiten. Es handelt sich dabei um eine [Nebenläufigkeit](https://de.wikipedia.org/wiki/Nebenl%C3%A4ufigkeit) auf Befehlsebene, bei der die feinkörnige Nebenläufigkeit zwischen den einzelnen Befehlen ausgenutzt wird. Da Superskalartechnik nicht den Befehlssatz der Architektur verändert, wird auch von einer [Mikroarchitektur](https://de.wikipedia.org/wiki/Mikroarchitektur) gesprochen.
+
 Eine superskalare Architektur bringt Parallelismus auf der Instruktionsebene. Daher kann der Prozessor mehr als eine Instruktion während eines Clock-Cycle ausführen indem er mehrere Instruktionen auf mehrere redundante Funktionseinheiten im Prozessor legt. 
 
 ![](DraggedImage-5.png)
