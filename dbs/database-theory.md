@@ -73,7 +73,7 @@ Nach Carl August Zehnder ist eine Datenbankverwaltungssystem folgendes:
 Er definiert eine Datenbank wie folgt:
 > Eine Datenbank ist eine selbstständige, auf Dauer und für flexiblen und sicheren Gebrauch ausgelegte Datenorganisaation, die einen Datenbestand (Datenbasis) und die dazugehörige Datenverwaltung (dbms) umfasst.
 
-![Database Model](./asssets/database_model.png)
+![Database Model](./assets/database_model.png)
 
 ## Motivation: Weshalb Datenbanken?
 DBMS ermöglichen:
