@@ -7,7 +7,8 @@ Siehe auch Meier & Kaufmann (2016) Kapitel 1.1; 1.2.3; 1.3; 1.4.3
 Eine Datenbank ist eine Datenbanksystem (zur Verwaltung von Datenbeständen) und eine Datenbasis (die Daten), welche zusammen als Einheit gekapselt sind.
 
 ### Die Konzept Informationssystem und Datenbanksystem abgrenzen
-Eine Datenbank ist ein Teil eines Informationssystems.
+Eine Datenbank ist ein Teil eines Informationssystems. 
+Bei einem Informationssystem steht der Nutzer im Zentrum, das System hat den Kontext des Benutzers.
 
 Im Unterschied zu einer Datenbank bietet ein Informationssystem auch folgendes (teile können Datenbanken auch):
 - Benutzerführung
@@ -19,6 +20,8 @@ Im Unterschied zu einer Datenbank bietet ein Informationssystem auch folgendes (
 - Datenschutz
 
 ### Die Gründe für den Einsatz von Datenbanken beschreiben
+
+
 Siehe [Motivation: Weshalb Datenbanken?](#Die Datenbanksprache ist nicht SQL)
 
 ### Das Konzept der Relationalen Datenbank definieren und erklären
