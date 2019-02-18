@@ -19,16 +19,16 @@ Im Unterschied zu einer Datenbank bietet ein Informationssystem auch folgendes (
 - Datenschutz
 
 ### Die Gründe für den Einsatz von Datenbanken beschreiben
-Siehe [Motivation: Weshalb Datenbanken?](#Die Datenbanksprache ist nicht SQL)
+Siehe [Motivation: Weshalb Datenbanken?](#motivation-weshalb-datenbanken?)
 
 ### Das Konzept der Relationalen Datenbank definieren und erklären
-Siehe [Relationale Datenbanken](#Relationale Datenbanken)
+Siehe [Relationale Datenbanken](#relationale-datenbanken)
 
 ### Den Begriff Big Data definieren (3V)
-Siehe [Erster Abschnitt Big Data: 3V](#Big Data: 3V)
+Siehe [Erster Abschnitt Big Data: 3V](#big-data-3v)
 
 ### Das Konzept der NoSQL-Datenkbanken definieren und erklären
-Siehe [Nicht-relationale Datenbanken](#Nicht-relationale Datenbanken)
+Siehe [Nicht-relationale Datenbanken](#nicht-relationale-datenbanken)
 
 ## Kontrollfragen
 
