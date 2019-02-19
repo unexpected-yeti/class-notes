@@ -8,7 +8,11 @@ Siehe Meier & Kaufmann (2016) Kapitel 1.5
 ### Ziele und Werkzeuge der 4 Eckpfeiler des Datenmanagements anhand einer praktischen Fallstudie erkennen und zuordnen
 Siehe Fallstudie von IBM und der deutschen Börse (sogleich auch die Gruppenarbeit)
 
+## Definition Datenmanagement
+Unter Datenmanagement fasst man alle betrieblichen, organisatorischen und technischen Funktionen der Datenarchitektur, der Datenadministration und der Datentechnik zusammen, die der unternehmensweiten Datenhaltung, Datenpflege, Datennutzung sowie dem Business Analytics dienen.
+
 ## Eckpfeiler des Datenmanagements
+Ein zukunftgerichtetes Datenmanagement befasst sich sowohl strategisch mit der Informationsbeschaffung und -bewirtschaftung als auch operativ mit der effizienten Bereitstellung und Auswertung von aktuellen und konsistenten Daten.
 Die vier Eckpfeiler des Datenmanagements sind die Datenarchitektur, Datenadministration, Datentechnik und Datennutzung.
 
 ### Datenarchitektur
