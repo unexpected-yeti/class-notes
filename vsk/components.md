@@ -12,6 +12,8 @@ Definition der European Conference on Object-Oriented Programming (ECOOP), 1996:
 Definition von Councill, Heineman: Component-Based Software Engineering, Addison-Wesley, 2001:
 > Eine Software-Komponente ist ein Software-Element, das zu einem bestimmten Komponentenmodell passt und entsprechend einem Composition Standard ohne Änderungen mit anderen Komponenten verknüpft und ausgeführt werden kann.
 
+Auswändig lernen für die Prüfung.
+
 ## Eigenschaften von Komponenten
 - Sie sind eigenständig und ausführbare Software Einheiten, d.h. Subsysteme, Prozesse, Objekte
 - Sie sind über ihre Schnittstellen austauschbar definiert
