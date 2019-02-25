@@ -57,12 +57,12 @@ Um Daten verbindungsorientiert zu versenden, sind folgende Aktionen nötig:
 
 Ein Server wird durch die Klasse `ServerSocket` repräsentiert.
 Der Lebenszyklus eines TCP Servers sieht wie folgt aus:
-1. ServerSocket mit Port erzeugen
-2. Mit `accept` auf eine Verbindung warten
-3. In- und Outputstreaam mit dem Socket verknüpfen
-4. Daten lesen und schreiben, entsprechend dem vereinbarten Protokoll
-5. Connection schliessen
-6. Beim Schritt 2. weitermachen oder ServerSocket schliessen
+  1. ServerSocket mit Port erzeugen
+  2. Mit `accept` auf eine Verbindung warten
+  3. In- und Outputstreaam mit dem Socket verknüpfen
+  4. Daten lesen und schreiben, entsprechend dem vereinbarten Protokoll
+  5. Connection schliessen
+  6. Beim Schritt 2. weitermachen oder ServerSocket schliessen
 
 > Bei der Vergabe eines Ports (beim erstellen eines Sockets) in Unix-Systemen können nur Root-Besitzer
 Port-Nummern unter 1024 nutzen
