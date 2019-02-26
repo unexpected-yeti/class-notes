@@ -20,7 +20,7 @@ Im Unterschied zu einer Datenbank bietet ein Informationssystem auch folgendes (
 - Datenschutz
 
 ### Die Gründe für den Einsatz von Datenbanken beschreiben
-Siehe [Motivation: Weshalb Datenbanken?](#motivation-weshalb-datenbanken?)
+Siehe [Motivation: Weshalb Datenbanken?](#motivation-weshalb-datenbanken)
 
 ### Das Konzept der Relationalen Datenbank definieren und erklären
 Siehe [Relationale Datenbanken](#relationale-datenbanken)
@@ -37,20 +37,19 @@ Siehe [Nicht-relationale Datenbanken](#nicht-relationale-datenbanken)
 
 #### Was ist der Unterschied zwischen einer Datenbank und einem Informationssystem?
 Ein Informationssystem erlaubt Anwendern interaktiv Informationen zu speichern und zu verknüpfen, Fragen zu stellen und Antworten zu erhalten.
-Im Unterschied ist eine Datenbank eine Software zum speichern, beschreiben und abfragen von Daten.
+Im Unterschied ist eine Datenbank eine Software zum Speichern, Beschreiben und Abfragen von Daten.
 Die Datenbank kennt keinen Informationsgehalt und ist anwendungsunabhängig.
 
 #### Was ist der Unterschied zwischen einm Datenbank-System und einem Dateisystem?
 In einem Dateisystem kann jedes Anwenderprogramm direkt auf die Daten zugreifen.
-Beim Datenbanksystem passiert dies via das DBMS.
+Beim Datenbanksystem passiert dies via DBMS.
 
 #### Was ist der Unterschied zwischen einer SQL- und einer NoSQL-Datenbank?
-Im Unterschied zu SQL-Datenbanken arbeiten No-SQL-Datenbanken nicht mit Tabellen und verwenden nicht die Datenbanksprache SQL.
-Des weiteren erfüllen NoSQL-Datenbanken folgende Eigenschaften nur teilweise:
-- Relational Modelliert
+Im Unterschied zu SQL-Datenbanken arbeiten NoSQL-Datenbanken nicht mit Tabellen und verwenden nicht die Datenbanksprache SQL.
+Des Weiteren erfüllen NoSQL-Datenbanken folgende Eigenschaften nur teilweise:
+- Relational modelliert
 - Schematisch
-- Sprache SQL
-- Dataenunabhängige Architektur
+- Datenunabhängige Architektur
 - Mehrbenutzerbetrieb
 - Konsistenz
 - Datensicherheit und Datenschutz
@@ -71,14 +70,34 @@ Eine Datenbank ist eine Software, welche sich aus einem System (Datenbanksystem)
 Der Zugriff auf die Daten erfolgt via dem System und nicht via File direkt.
 
 #### Warum ist eine XML-Datei keine Datenbank?
-Weil es eine Datei und keine Datenbank, bzw. die Datenbasis aber ohne Datenbanksystem.
-Des weiteren ist XML mühsam.
+Weil es eine Datei und keine Datenbank ist, bzw. die Datenbasis aber ohne Datenbanksystem.
+Des Weiteren ist XML mühsam.
 
 #### Welche Vor- und Nachteile hat aus Ihrer Perspektive der Einsatz von Datenbanken? Bzw. welche Vor- und Nachteile hat die Verarbeitung mit Dateien? Vergleichen Sie.
+Vorteile Datenbank:
+
+- Tabellen können in Beziehung zueinander stehen
+- Universelle Abfragesprache (z.B. SQL) für Datenauswertungen
+- Transaktionen-Verarbeitung möglich (z.B. T-SQL)
+- Geringe bis keine Redundanz von Daten
+
 Nachteile Datenbank:
+
 - Zusätzliche Infrastruktur
-- Operationeller und Wartungs Overhead
-... 
+- Overhead in Operations und Wartung
+- Zusätzliche Lizenzkosten notwendig
+- Memory-Auslastung: RDBMSs sind sehr RAM-lastig, alle Daten müssen zuerst durch RAM (Indexieren, Sortieren etc.)
+
+Vorteile Datei:
+
+- Effizient für kleine Datenmengen
+- Schneller für kleine, einfache Schreib- und Lesezugriffe
+
+Nachteile Datei:
+
+- Keine Transaktionen (somit auch kein ACID)
+- Keine parallele Verwendung durch mehrer User
+- Keine verteilte Systeme möglich (mit relationalen Datenbanken auch nicht wirklich)
 
 ## Datenbanksysteme
 Ein Datenbanksystem besteht aus einer Datenbasis und einem Verwaltungsprogramm. Genauer:
@@ -97,6 +116,7 @@ Er definiert eine Datenbank wie folgt:
 
 ## Motivation: Weshalb Datenbanken?
 DBMS ermöglichen:
+
 - Persistierung, Strukturierung und Organisation von Daten
 - Mehrbenutzerbetrieb: Transaktionsmanagement
 - Möglichkeiten für Zugriff und Manipulation von Datensätzen
@@ -117,6 +137,7 @@ Zusammenfassend sind relationale Datenbanksysteme integrierte Systeme zur einhei
 
 ### Relationales Datenbanksystem
 Ein Relationales Datenbanksystem ist durch folgende Eigenschaften charakterisiert:
+
 - *Model:* Das Datenbankmodell unterliegt dem Relationenmodell, d. h. alle Daten und Datenbeziehungen werden in Form von Tabellen ausgedrückt.
 - *Schema:* Die Definition der Tabellen und der Merkmale werden im relationalen Datenbankschema abgelegt. Dieses enthält zudem die Definition der Identifikationsschlüssel sowie Regeln zur Gewährung der Integrität.
 - *Sprache:* Das Datenbanksystem umfasst SQL für Datendefinition, -selektion und -manipulation. Die Sprachkomponente ist deskriptiv.
@@ -127,6 +148,7 @@ Ein Relationales Datenbanksystem ist durch folgende Eigenschaften charakterisier
 
 ## Nicht-relationale Datenbanken
 Der Begriff NoSQL wird heute für nicht-relationale Ansätze im Datenmanagement verwendet, mit folgenden zwei Bedingungen:
+
 - Die Speicherung der Daten erfolgt nicht in Tabellen
 - Die Datenbanksprache ist nicht SQL 
 
@@ -136,16 +158,20 @@ Die Daten werden in Spalten, Dokumenten oder Graphen gespeichert.
 Dabei existieren in der Regel verteilte Datenreplikate.
 
 ### Nicht-relataionales Datenbanksystem
-Ein Nicht-relationales Datenbanksystem ist durch folgende Eigenschaften charakterisiert:
-- *Modell:* Das zugrundeliegende Modell ist nich relational.
+Ein nicht-relationales Datenbanksystem ist durch folgende Eigenschaften charakterisiert:
+
+- *Modell:* Das zugrundeliegende Modell ist nicht relational.
 - *Mindestens 3V:* Volume, Variety und Velocity wird unterstützt.
 - *Schema:* Das System unterliegt keinem fixen Schema.
 - *Architektur:* Die Architektur unterstützt masssiv verteilte Webanwendungen und horizontale Skalierung.
 - *Replikation:* Datenreplikation wird unterstüzt.
-- *Konsistenzgewährleistung:* Aufgrund des CAP-Theorems ist die Konsistenz lediglich verzögert gewährleistet (weak consistency), falls hohe Verfügbarkeit und Ausfalltoleranz angestrebt wird.
+- *Konsistenzgewährleistung:* Aufgrund des CAP-Theorems [^1] ist die Konsistenz lediglich verzögert gewährleistet (weak consistency), falls hohe Verfügbarkeit und Ausfalltoleranz angestrebt wird.
+
+[^1]: Das CAP-Theorem oder Brewers Theorem besagt, dass es in einem verteilten System unmöglich ist, gleichzeitig die drei Eigenschaften Consistency (Konsistenz), Availability (Verfügbarkeit) und Partition Tolerance (Ausfalltoleranz) zu garantieren. ([siehe Wikipedia](https://de.wikipedia.org/wiki/CAP-Theorem))
 
 ## Big Data: 3V
 Daten welche in die drei untenstehenden Dimensionen an Quantität und Qualität fallen werden oft Big Data genannt:
+
 - *Volume:* Der Datenbestand ist umfangreich und liegt im Tera- bis Zettabytebereich.
 - *Variety:* Speicherung von strukturierten, semi-strukturierten und unstrukturierten Daten.
 - *Velocity:* Der Begriff bedeutet Geschwindigkeit und verlangt, dass Datenströme (engl. data streams) in Echtzeit ausgewertet und analysiert werden können.
@@ -154,12 +180,13 @@ SQL-Datenbanken sind nicht für Big Data ausgerichtet. Aus diesem Grund werden v
 
 In einigen Definitionen wird im Rahmen von Big Data auch von Informationskapital und Vermögenswert gesprochen.
 Aus diesem Grund fügen einige Experten ein weiteres V hinzu:
+
 - *Value:* Big Data Anwendungen sollen den Unternehmenswert steigern. 
 
 Es liegen unterschiedliche Qualitäten von Datenbeständen vor.
 Dies muss bei der Auswertung berücksichtigt werden.
 Daher werden die drei oder vier V oft mit dem letzten V abgerundet:
+
 - *Veracity (Aufrichtigkeit oder Wahrhaftigkeit):* Da viele Daten vage oder ungenau sind, müssen spezifische Algorithmen zur Bewertung der Aussagekraft resp. zur Qualitätseinschätzung der Resultate verwendet werden.
 
 > Umfangreiche Datenbestände garantieren nicht per se bessere Auswertungsqualität!
-
