@@ -1,6 +1,6 @@
 # DBS Utils
 
-## PostgreSQL mit Docker
+## PostgreSQL mit Docker
 Starten der PostgreSQL Instanz: `make run`
 
 Starten einer PSQL REPL: `make repl`
