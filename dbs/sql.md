@@ -14,6 +14,46 @@
 
 ### Aggregationen `(count, sum, min, max, avg)`
 
+## Kontrollfragen
+
+### Theorie
+
+#### Welche Benutzergruppen gibt es und wie interagieren sie mit der Datenbank?
+
+#### Welche Benutzergruppen gibt es und wie interagieren sie mit der Datenbank?
+
+#### Wie ist der Zusammenhang von Kreuzprodukt und Division?
+
+#### Was ist der Zusammehang von mengenorientierten Abfragesprachen und der Relationenalgebra?
+
+#### Wie wird die Selektion in SQL umgesetzt?
+
+#### Wie wird die Projektion in SQL umgesetzt?
+
+#### Wie wird der Join in SQL umgesetzt?
+
+#### Wie zeigt sich die Eigenschaft von SQL, dass sie deskriptiv ist?
+
+#### Wie zeigt sich die Eigenschaft von SQL, dass sie deskriptiv ist?
+
+### SQL und Relationenalgebra
+
+#### Selektion
+Welche Professoren haben Rang _C4_?
+
+**SQL**
+```sql
+SELECT * FROM professoren WHERE rang='C4';
+```
+
+**Relationenalgebra**
+```latex
+\sigma_{rang=C4}(professoren)
+```
+
+#### Projektion
+Projizieren Sie die Relation Professoren auf die Attribute Personennummer und Name. Tun Sie in einem zweiten Schritt dasselbe für die Relation Assistenten.
+
 ## Allgemein
 Die Sprache SEQUEL („Structured English QUEry Language“) wurde Mitte der siebziger Jahre für «System R» geschaffen; dieses Testsystem war eines der ersten lauffähigen relationalen Datenbanksysteme.
 Das Prinzip von SEQUEL war eine relational vollständige Abfragesprache, welche nicht auf mathematischen Symbolen, sondern auf englischen Wörtern wie ‚select’, ‚from’, ‚where’, ‚count’, ‚group by’ etc. basiert.

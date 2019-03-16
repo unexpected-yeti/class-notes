@@ -4,9 +4,16 @@ pull:
 
 .PHONY: run
 run: pull
-	docker run --name dbs-postgres -e POSTGRES_PASSWORD=dbs4life -d postgres
+	docker run -v `pwd`/sql:/sql --name dbs-postgres -e POSTGRES_PASSWORD=dbs4life -d postgres 
 
-.PHONY: repl
-repl:
-	docker run -it --rm --link dbs-postgres:postgres postgres psql -h postgres -U postgres
+.PHONY: stop
+stop:
+	docker rm -fv dbs-postgres
 
+.PHONY: logs
+logs:
+	docker logs dbs-postgres
+
+.PHONY: bash
+bash:
+	docker exec -it dbs-postgres bash
