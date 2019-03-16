@@ -47,7 +47,7 @@ SELECT * FROM professoren WHERE rang='C4';
 ```
 
 **Relationenalgebra**
-```latex
+```math
 \sigma_{rang=C4}(professoren)
 ```
 
