@@ -51,12 +51,33 @@ SELECT * FROM professoren WHERE rang='C4';
 **Relationenalgebra**
 
 $$
-\sigma_{rang=C4}(professoren)
+\sigma_{rang=C4}(professoren) 
 $$
 
 #### Projektion
 
 Projizieren Sie die Relation Professoren auf die Attribute Personennummer und Name. Tun Sie in einem zweiten Schritt dasselbe für die Relation Assistenten.
+
+**SQL**
+```sql
+SELECT (persnr, name) FROM professoren;
+SELECT (persnr, name) FROM assistenten;
+```
+
+**Relationenalgebra**
+$$
+\PI_{persnr,name}(professoren)
+\PI_{persnr,name}(professoren)
+$$
+
+#### Kreuzprodukt
+
+Welche mögliche Kombinationen von Vorlesungen und Professoren gibt es?
+
+**Relationenalgebbra**
+$$
+\PI_
+$$
 
 ## Allgemein
 
