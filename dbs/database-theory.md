@@ -130,8 +130,7 @@ DBMS ermöglichen:
 * Mehrbenutzerbetrieb: Transaktionsmanagement
 * Möglichkeiten für Zugriff und Manipulation von Datensätzen
 * Konsistenz und Integrität der Daten
-* Sicherheit der Daten
-* Effizienz bei Applikationsentwicklung durch Wiederverwendung
+* Sicherheit der Daten * Effizienz bei Applikationsentwicklung durch Wiederverwendung
 * Einfachere Wartung durch Kapselung der Daten \(Trennung von Daten und Anwendungen\)
 
 ## Relationale Datenbanken
