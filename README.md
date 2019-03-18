@@ -1,6 +1,6 @@
 # class-notes
 
-Notizen für diverse Module, verfügbar unter [https://yeti.gitbook.io/class-notes](https://yeti.gitbook.io/class-notes)
+Notizen für diverse Module, verfügbar unter [https://yeti.gitbook.io/class-notes](https://yeti.gitbook.io/class-notes) und verwaltet unter https://github.com/unexpected-yeti/class-notes.
 
 Für folgende Module sind Notizen verfügbar:
 
