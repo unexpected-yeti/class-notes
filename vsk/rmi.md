@@ -10,8 +10,7 @@ miteinander über den Austausch von Nachrichten kommunizieren.
 
 ### Verteilte Anwendungen
 
-Eine verteilte Anwendung nutzt ein verteiltes System als
-Kommunikationsinfrastruktur für ihre verteilten Komponenten
+Eine verteilte Anwendung nutzt ein verteiltes System als Kommunikationsinfrastruktur für ihre verteilten Komponenten.
 
 ### Middleware
 
@@ -132,12 +131,11 @@ implements RemoteFibonacci {
  ```java
 public final class RegistrySetup {
  public static void main(final String[] args) throws RemoteException, InterruptedException {
- final Registry reg = LocateRegistry.createRegistry(
- Registry.REGISTRY_PORT);
- LOG.info("o.k.");
- synchronized (reg) {
-     reg.wait();
- }
+    final Registry reg = LocateRegistry.createRegistry(Registry.REGISTRY_PORT);
+    LOG.info("o.k.");
+    synchronized (reg) {
+        reg.wait();
+    }
  }
 }
  ```
@@ -149,7 +147,7 @@ public final class RegistrySetup {
 ```java
 public static void bind(String name, Remote obj)
  throws AlreadyBoundException, MalformedURLException,
- RemoteException
+ RemoteException;
 public static void rebind(String name, Remote obj)
  throws RemoteException, MalformedURLException
 public static void unbind(String name)
