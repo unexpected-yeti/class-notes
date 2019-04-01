@@ -115,6 +115,24 @@ Der Austausch bzw. die Ablösung eines Subsystems (beispielsweise infolge Refact
 Das Facade-Pattern kann einfach zur Entkopplung eingesetzt werden. 
 Es ist hauptsächlich darauf zu achten, dass die Fassade keinerlei weitere Funktionenn bzw. Business-Logic enthält!
 
+#### Adapter (Wrapper)
+
+Durch das Adapter-Pattern wird die Schnittstelle einer Klasse an die von den Klienten erwartete (Ziel-)Schnittstelle angepasst.
+
+Für alternative Erklärung inkl. Beispiel [siehe Artikel auf geeksforgeeks](https://www.geeksforgeeks.org/adapter-pattern).
+
+![Example Facade Pattern](./assets/adapterpattern.png)
+
+##### Teilnehmer
+
+- Interface (*hier `LogPerisistor`*): gewünschte Schnittstelle, kann abstrakte Klasse oder Interface sein
+- Adapter (*hier `StringPersistorAdapter`): verwendet adaptierte Klasse/Objekt, spezialisiert oder implementiert Zielschnittstelle
+- Adaptierte Klasse (*hier `StringPersistor`*): Klasse, deren Schnittstelle adaptiert/gerwappt werden soll
+
+##### Motivation
+
+- Einfachere Wiederverwendung von existierenden Klassen oder Komponenten, deren Schnittstelle aber unpassend ist.
+- Implementation einer möglichst allgemeinen Schnittstelle und diese durch Adapter anpassen.
 
 ## Verhaltensmuster
 
