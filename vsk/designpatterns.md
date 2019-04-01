@@ -14,14 +14,15 @@ Daraus entstandene Gruppen:
 
 Sekundäre Unterteilung:
 
-- Klassenmuster: Beziehungen zu Kompilierungszeitpunkg bereits festgelegt.
+- Klassenmuster: Beziehungen zu Kompilierungszeitpunkt bereits festgelegt.
 - Objektmuster: Beziehungen zur Laufzeit dynamisch veränderbar.
 
 ## Erzeugungsmuster
 
 ### Ziel
 
-Hier ist das Ziel die Abstrahierung der Erzeugung von Objekten
+Hier ist das Ziel die Abstrahierung der Erzeugung von Objekten.
+
 Entscheidung über: 
 
 - zu verwendenden konkreten Typ
@@ -34,7 +35,7 @@ Die folgenden Muster gehören zur Gruppe der Erzeugungsmuster:
 
 - Abstrakte Fabrik (Abstract Factory, Kit)
 - Erbauer (Builder)
-- Fabrikmethode (Factory Method, Virtual Constructor)*
+- Fabrikmethode (Factory Method, Virtual Constructor)
 - Prototyp (Prototype)
 - [Einzelstück (Singleton)](#singleton)
 
@@ -83,10 +84,10 @@ Die Verwendung von Strukturmustern bezweckt jeweils einen der folgenden Punkte:
 
 ### Beispiele
 
-- Adapter (Adapter, Wrapper)
+- [Adapter (Adapter, Wrapper)](#adapter-wrapper)
 - Brücke (Bridge, Handle/Body)
 - Dekorierer (Decorator, Wrapper)
-- Fassade (Facade)
+- [Fassade (Facade)](#facade)
 - Fliegengewicht (Flyweight)
 - Kompositum (Composite)*
 - Stellvertreter (Proxy, Surrogate)*
@@ -121,12 +122,12 @@ Durch das Adapter-Pattern wird die Schnittstelle einer Klasse an die von den Kli
 
 Für alternative Erklärung inkl. Beispiel [siehe Artikel auf geeksforgeeks](https://www.geeksforgeeks.org/adapter-pattern).
 
-![Example Facade Pattern](./assets/adapterpattern.png)
+![Example Adapter Pattern](./assets/adapterpattern.png)
 
 ##### Teilnehmer
 
 - Interface (*hier `LogPerisistor`*): gewünschte Schnittstelle, kann abstrakte Klasse oder Interface sein
-- Adapter (*hier `StringPersistorAdapter`): verwendet adaptierte Klasse/Objekt, spezialisiert oder implementiert Zielschnittstelle
+- Adapter (*hier `StringPersistorAdapter`*): verwendet adaptierte Klasse/Objekt, spezialisiert oder implementiert Zielschnittstelle
 - Adaptierte Klasse (*hier `StringPersistor`*): Klasse, deren Schnittstelle adaptiert/gerwappt werden soll
 
 ##### Motivation
@@ -177,7 +178,7 @@ Vorzugsweise wird die konkrete Implementation im Konstruktor übergeben oder per
     - Besitzt Referenz auf konkrete Strategie, erstellt diese ggf. selber
     - Stellt ggf. Datenschnittstelle für Strategien zur Verfügung
     - Meinung: Nur verwenden, wenn dies nicht Concern des Clients ist, bzw. wenn das SRP verletzt würde.
-- Konkrete Strategien (*hier `BubbleSort`, `MergeSort` etc.): Implementieren konkreten Algorithmus, greifen ggf. auf Kontext zu
+- Konkrete Strategien (*hier `BubbleSort`, `MergeSort` etc.*): Implementieren konkreten Algorithmus, greifen ggf. auf Kontext zu
 
 ##### Motivation
 
