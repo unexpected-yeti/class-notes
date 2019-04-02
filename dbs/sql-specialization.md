@@ -102,6 +102,8 @@ FROM [Exam]
 - `OVER (PARTITION BY Y)`: gruppierte Aggregation auf Einzelsatzbebene, partitioniert nach einer Spalte Y
 - **Sinn:** So kann z.B. eine Aggregatsfunktion (`SUM`, `COUNT`, `MIN`) in Einzeldatensätzen verwendet werden
 
+[Weiterführender Link](https://www.red-gate.com/simple-talk/sql/t-sql-programming/introduction-to-t-sql-window-functions)
+
 #### PostgreSQL
 
 PostgreSQL bietet einige built-in window functions an:
