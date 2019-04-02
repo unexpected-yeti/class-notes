@@ -14,7 +14,7 @@
 
 Das *Information Schema* bietet viele verschiedene Metadaten zur Abfrage an:
 
-![Übersicht Information Schema](./assets/informationschema_overwiew.png)
+![Übersicht Information Schema](./assets/informationschema_overview.png)
 
 #### Anwendungsfall
 
