@@ -1,5 +1,4 @@
 # Verteilung & Kommunikation (RMI)
-
 ## Begriffserklärungen
 
 ### Verteilte Systeme
