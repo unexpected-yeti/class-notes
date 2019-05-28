@@ -1,4 +1,7 @@
 # Verteilung & Kommunikation (RMI)
+
+> TODO: Claudio macht noch (https://elearning.hslu.ch/ilias/goto.php?target=file_4028968_download&client_id=hslu)[https://elearning.hslu.ch/ilias/goto.php?target=file_4028968_download&client_id=hslu]
+
 ## Begriffserklärungen
 
 ### Verteilte Systeme
