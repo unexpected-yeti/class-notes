@@ -19,7 +19,7 @@ This Compose file contains the following environment variables:
 * `PGADMIN_DEFAULT_PASSWORD` the default value is **admin**
 
 ## Access to postgres: 
-* `localhost:5432`
+* `localhost:5432` (within the PgAdmin UI use postgres as the host)
 * **Username:** postgres (as a default)
 * **Password:** changeme (as a default)
 
