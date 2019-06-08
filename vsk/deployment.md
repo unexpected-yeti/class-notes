@@ -4,7 +4,7 @@
 
 ### Sie kennen die verschiedenen Aspekte die es beim Deployment zu beachten gibt
 
-[comment]: # L1 
+[comment]: #
 
 ### Sie verstehen einfache Deploymentdiagramme und können diese erstellen
 
