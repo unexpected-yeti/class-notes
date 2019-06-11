@@ -6,7 +6,7 @@
 
 ### Sie verstehen einfache Deploymentdiagramme und können diese erstellen
 
-### [anki] Sie kennen SemVer und können es anwenden
+### Sie kennen SemVer und können es anwenden 
 
 ### Sie kennen Sinn und Zweck eines Binär-Repository und können dieses nutzen
 
