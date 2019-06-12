@@ -161,6 +161,8 @@ Damit kann allen Ereignissen in einem verteilten System eine Zeit zugewisen werd
 
 ## Lamports Uhren
 
+See also: https://www.youtube.com/watch?v=CMBjvCzDVkY
+
 ### Eigenschaften
 
 Lamports Uhren erfüllen die Uhrenbedingung! 
@@ -173,6 +175,8 @@ Hierfür müsste auch die Umkehrung der Uhrenbedingung gelten, es gilt aber ledi
 
 ## Vektor-Zeitstempel
 
+See also: <https://www.youtube.com/watch?v=jD4ECsieFbE>
+
 Ein Vektor-Zeitstempel _VT(a)_, der einem Ereignis _a_ zugewiesen wurde, hat die Egenschaft, dass Ereignis _a_
  dem Ereignis b kausal vorausgeht, wenn _VT(a)_ < _VT(b)_ für ein Ereignis _b_ gilt.
 
@@ -182,3 +186,29 @@ Ein Vektor-Zeitstempel _VT(a)_, der einem Ereignis _a_ zugewiesen wurde, hat die
  1. _Vi_[i] ist die Anzahl der Ereignisse, die bisher in _Pi_ aufgetreten sind
  2. _Vi_[j] = k, erkennt _Pi_, dass in _Pj_ k Ereignisse aufgetreten sind
  3. Der Vektor _Vi_ wird den gesendeten Nachrichten mitgegeben.
+
+
+Jeder Prozess hat einen Vektor an Uhren (Integer Clock). Angenommen es gibt `N` Prozesse (in einer Gruppe von Prozessen `1..N`). Jeder Vektor hat `N` Elemente. Der Prozess `i` hat einen Vektor $V_i[1..N]$.
+
+Das j-the Element im Vektor vom Prozess i (also $V_i[j]$) ist die Zeit (aus Perspektive Prozess i) vom letzten Event des Prozesses j.
+
+Zu Beginn ist der Vektor der Nullvektor.
+
+### Vektor-Zeit inkrementieren
+
+Bei einer Instruktion oder einem gesendeten Event bei Prozess i, der Prozess inkrementiert nur sein i-tes Element des Vektors. Jede Nachricht trägt den Vektor-Zeitstempel des sendenden Prozesses mit.
+
+Erhält Prozess $i​$ von Prozess $j​$ eine Nachricht passiert:
+
+- $V_i[i] = V_i[i] + 1​$
+- $V_i[j] = max(V_\text{message}[j], V_i[j]) \text{for}  j \neq i$
+
+Also: Der Prozess inkrementiert seinen Vektor an i-ter Stelle und aktualisiert den Zeitstempel an der j-ten Stelle um den höheren Wert zwischen dem gespeicherten und dem mit gesendeten Wert.
+
+### Kausalität
+
+* Zwei Vektor-Zeitstempel sind gleich ($VT_1 = VT_2$) falls $VT_1[i] = VT_2[i]$ für alle $i = 1, ..., N$
+* Ein Vektor-Zeitstempel ist kleiner oder gleich ein anderer Vektor ($VT_1 \le VT_2$) falls $VT_1[i] \le VT_2[i]$ für alle $i = 1, ..., N$
+* Zwei Events sind **kausal**, z.B. $VT_1$ erfolgt vor $VT_2$ ($VT_1 < VT_2$) falls:
+  * $VT_1 \le VT_2$ und
+  * Es existiert ein $j$ sodass $1 \le j \le N$ und $VT_1[j] < VT_2[j]​$ 
