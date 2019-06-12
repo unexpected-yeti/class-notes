@@ -127,7 +127,7 @@ Die Verfahren zur Synchronisation von logischen Uhren in grossen Systemen ist im
 
 Lamport stellte auch die _Happened-Before-Relation_ auf.
 Der Ausdruck a -> b wird gelesen als "_a_ passiert vor _b_". 
-Dies bedeutet, dass sich **alle Prozese einig sind**, dass **zuerst das Ereignis _a_** und **dann das Ereignis _b_** stattfindet.
+Dies bedeutet, dass sich **alle Prozese einig sind**, dass **zuerst das Ereignis _a_** und **dann das Ereignis _b_** stattfindet. Es gilt ebenfalls die Transitivität falls a -> b und b -> c, dann gilt a -> c
 
 ### Lamport-Zeitstempel
 
@@ -208,7 +208,7 @@ Also: Der Prozess inkrementiert seinen Vektor an i-ter Stelle und aktualisiert d
 ### Kausalität
 
 * Zwei Vektor-Zeitstempel sind gleich ($VT_1 = VT_2$) falls $VT_1[i] = VT_2[i]$ für alle $i = 1, ..., N$
-* Ein Vektor-Zeitstempel ist kleiner oder gleich ein anderer Vektor ($VT_1 \le VT_2$) falls $VT_1[i] \le VT_2[i]$ für alle $i = 1, ..., N$
+* Ein Vektor-Zeitstempel ist kleiner oder gleich ein anderer Vektor ($VT_1 \le VT_2​$) falls $VT_1[i] \le VT_2[i]​$ für alle $i = 1, ..., N​$
 * Zwei Events sind **kausal**, z.B. $VT_1$ erfolgt vor $VT_2$ ($VT_1 < VT_2$) falls:
   * $VT_1 \le VT_2$ und
-  * Es existiert ein $j$ sodass $1 \le j \le N$ und $VT_1[j] < VT_2[j]​$ 
+  * Es existiert ein $j$ sodass $$1 \le j \le N$$ und $$VT_1[j] < VT_2[j]$$
