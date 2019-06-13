@@ -2,15 +2,11 @@
 
 ## Lernziele
 
-### Sie kennen die verschiedenen Aspekte die es beim Deployment zu beachten gibt
-
-### Sie verstehen einfache Deploymentdiagramme und können diese erstellen
-
-### Sie kennen SemVer und können es anwenden 
-
-### Sie kennen Sinn und Zweck eines Binär-Repository und können dieses nutzen
-
-### Sie kennen verschiedene Deployment-Arten von Java und können diese umsetzen
+* Sie kennen die verschiedenen Aspekte die es beim Deployment zu beachten gibt
+* Sie verstehen einfache Deploymentdiagramme und können diese erstellen
+* Sie kennen SemVer und können es anwenden 
+* Sie kennen Sinn und Zweck eines Binär-Repository und können dieses nutzen
+* Sie kennen verschiedene Deployment-Arten von Java und können diese umsetzen
 
 ## Übersicht
 Ein Deployment besteht aus folgenden Punkten:
@@ -19,9 +15,7 @@ Ein Deployment besteht aus folgenden Punkten:
   - **Konfiguration**: Einstellungen der/des Programme(s) auf Benutzer, Netzwerkumgebung, Hardware etc. 
   - **Organisation**: Information, Schulung, Support, Planung, Produktion
 
-Ein Deployment findet auf jeden Fall am ende eines Projektes statt.
-Jedoch auch früher/häufiger bei Continuous Delivery (so z.B. am Ende nach jedem Sprint oder nach jedem entwickelten Feature).
-bei Continuous Deployment werden einezlne Build-/Sprint-/Iterationsergebnisse forlaufend deployt (z.B, auf interne Testumgebungen oder direkt beim Kunden).
+Ein Deployment findet auf jeden Fall am ende eines Projektes statt. Jedoch auch früher/häufiger bei Continuous Delivery (so z.B. am Ende nach jedem Sprint oder nach jedem entwickelten Feature). Bei Continuous Deployment werden einzelne Build-/Sprint-/Iterationsergebnisse fortlaufend deployed (z.B, auf interne Testumgebungen oder direkt beim Kunden).
 
 > Staging ist Deployment auf verschiedenen Umgebungen (Entwicklung, Test, Integration, Produktion, usw.)
 
@@ -70,6 +64,11 @@ Meist manuell nachgeführt, da qualitative Aussage.
 Evt. unterstützt durch Issue-Tracking-Systeme.
 Für Entwickler die zentrale Informationsquelle um die Möglichkeit bzw. die Notwendigkeit einer Migration auf eine neue Version (und das damit verbundene Risiko) einschätzen zu können.
 
+### Alternative: Time-Based Release Versioning
+
+* Man hält einen festen Rythmus von Release-Terminen ein (Zeitpunkt meistens in der Versionsnummer enthalten)
+* Beispiele wie Ubuntu: 17.04, 17.09, 18.04 ... (YY.MM Format für Jahr und Monat)
+
 ## Technisches Deployment
 
 ![Folie](./assets/deployment-technical-1.png)
@@ -78,3 +77,4 @@ Für Entwickler die zentrale Informationsquelle um die Möglichkeit bzw. die Not
 ![Folie](./assets/deployment-technical-4.png)
 ![Folie](./assets/deployment-technical-5.png)
 ![Folie](./assets/deployment-technical-6.png)
+
