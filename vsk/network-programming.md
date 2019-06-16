@@ -2,25 +2,22 @@
 
 ## Lernziele
 
-### Sie kennen die wichtigsten Begriffe aus den Netzwerk Konzepten kennen, die man für die Java Netzwerkprogrammierung benötigt.
+* Sie kennen die wichtigsten Begriffe aus den Netzwerk Konzepten kennen, die man für die Java Netzwerkprogrammierung benötigt (Siehe [Voraussetzungen](network-programming.md#Voraussetzungen))
+* Sie wissen, welche Aktionen nötig sind, um Daten verbindungsorientiert senden zu können (Siehe [1. Abschnitt im Teil TCP-Sockets](network-programming.md#TCP-Sockets))
+* Sie kennen den Lebenszyklus eines TCP Servers und können die einzelnen Elemente mit einem Java Programm in Beziehung stellen. (Siehe [2. Abschnitt im Teil TCP-Sockets](network-programming.md#TCP-Sockets))
+* Sie wissen was ein Netzwerk Interface ist und wie dieses in Java repräsentiert wird (Siehe [im Teil Network Interfaces](network-programming.md#Network%20Interfaces))
+* Sie können sowohl Java Client-Programme sowie Java Server- Programme analysieren und implementieren. (Siehe Beispiele \(TODO\) oder Projekt)
 
-Siehe [Voraussetzungen](network-programming.md#Voraussetzungen)
+## Netzwerkkonzepte
 
-### Sie wissen, welche Aktionen nötig sind, um Daten verbindungsorientiert senden zu können.
+### Schichten eines Netzwerk
 
-Siehe [1. Abschnitt im Teil TCP-Sockets](network-programming.md#TCP-Sockets)
+Die Internet Kommunikation benutzt das vier Schichten Modell:
 
-### Sie kennen den Lebenszyklus eines TCP Servers und können die einzelnen Elemente mit einem Java Programm in Beziehung stellen.
-
-Siehe [2. Abschnitt im Teil TCP-Sockets](network-programming.md#TCP-Sockets)
-
-### Sie wissen was ein Netzwerk Interface ist und wie dieses in Java repräsentiert wird.
-
-Siehe [im Teil Network Interfaces](network-programming.md#Network%20Interfaces)
-
-### Sie können sowohl Java Client-Programme sowie Java Server- Programme analysieren und implementieren.
-
-Siehe Beispiele \(TODO\) oder Projekt
+* Application Layer (HTTP, SMTP, DNS, etc)
+* Transport Layer (TCP, UDP)
+* Internet Layer (IP)
+* Network Layer (VDSL, Ethernet, WLAN, tetc)
 
 ## Voraussetzungen
 
@@ -56,6 +53,15 @@ Mit der Methode `getLocalHost()` kann die eigene Adresse abgefragt werden. Die e
 
 Mit der Methode `isSiteLocalAdress()` kann überprüft werden, ob eine Adresse im lokalen Netzwerk ist.
 
+### IP-Adressen finden
+
+![1560426466897](./assets/1560426466897.png)
+
+### Hostnamen finden
+
+![1560426491304](./assets/1560426491304.png)
+
+
 ### TCP-Sockets
 
 Um Daten verbindungsorientiert zu versenden, sind folgende Aktionen nötig:
@@ -65,11 +71,22 @@ Um Daten verbindungsorientiert zu versenden, sind folgende Aktionen nötig:
 * Daten über Socket lesen/schreiben
 * Socket schliessen
 
-Ein Server wird durch die Klasse `ServerSocket` repräsentiert. Der Lebenszyklus eines TCP Servers sieht wie folgt aus: 1. ServerSocket mit Port erzeugen 2. Mit `accept` auf eine Verbindung warten 3. In- und Outputstreaam mit dem Socket verknüpfen 4. Daten lesen und schreiben, entsprechend dem vereinbarten Protokoll 5. Connection schliessen 6. Beim Schritt 2. weitermachen oder ServerSocket schliessen
+Ein Server wird durch die Klasse `ServerSocket` repräsentiert. Der Lebenszyklus eines TCP Servers sieht wie folgt aus:
+
+1. ServerSocket mit Port erzeugen
+2. Mit `accept` auf eine Verbindung warten
+3. In- und Outputstreaam mit dem Socket verknüpfen
+4. Daten lesen und schreiben, entsprechend dem vereinbarten Protokoll
+5. Connection schliessen
+6. Beim Schritt 2. weitermachen oder ServerSocket schliessen
 
 > Bei der Vergabe eines Ports \(beim erstellen eines Sockets\) in Unix-Systemen können nur Root-Besitzer Port-Nummern unter 1024 nutzen
 
 Der Dienst und die Kommunikation mit dem Client sollte nebenläufig ausgeführt werden.
+
+Beispiel:
+
+![1560426588385](./assets/1560426588385.png)
 
 ### Network Interfaces
 
@@ -87,3 +104,14 @@ Um einen Server Socket einem bestimmten Netzwerk Adapter zuzuordnen, stehen üb
   ServerSocket (final int port, final int backlog, final InetAddress bindAddr) throws IOException
 ```
 
+
+
+## Beispiel: TCP Server
+
+![1560426737754](./assets/1560426737754.png)
+
+
+
+## Beispiel: Senden und Empfangen
+
+![1560426688452](./assets/1560426688452.png)

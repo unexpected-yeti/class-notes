@@ -35,6 +35,8 @@ Auswändig lernen für die Prüfung.
 
 Komponenten lassen sich hierachisch verschachteln.
 
+![1560426062931](./assets/1560426062931.png)
+
 ## Komponentenmodelle
 
 Komponentenmodelle sind konkrete Ausprägungen des Paradigmas der Komponentenbasierten Entwicklung. Neben der genauen Form und den Eigenschaften einer Komponente muss es einen Interaction-Standard und einen Composition-Standard festlegen.
@@ -88,6 +90,8 @@ Die Verhaltenssicht auf Komponenten beinhaltet folgendes:
 * _Prozess:_ welche Komponenten laufen parallel?
 * _Verteilung:_ Zuordnung der Komponenten zur HW
 
+![1560426150896](./assets/1560426150896.png)
+
 ### Komponenten-Spezifikation
 
 Die Komponenten-Spezifikation beinhaltet folgendes:
@@ -96,6 +100,8 @@ Die Komponenten-Spezifikation beinhaltet folgendes:
 * _Import:_ benötigte / benutzte Interfaces von anderen Komponenten
 * _Verhalten:_ Verhalten der Komponente
 * _Kontext:_ Rahmenbedingungen im Betrieb der Komponente
+
+![1560426172099](./assets/1560426172099.png)
 
 ### Architektur-Muster
 
