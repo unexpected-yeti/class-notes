@@ -1,5 +1,45 @@
 # Relationale Schemas
 
+## Lernziele
+
+1. Das Relationenmodell definieren
+2. Sinn und Zweck der Normalformen erklären
+3. Funktionale Abhängigkeit erkennen und für die Herleitung der Normalformen 1 und 2 anwenden
+4. Transitiven Abhängigkeit erkennen und für die Herleitung der Normalform 3 anwenden
+5. Entitätsmengen, Beziehungsmengen, Asssoziationen und Assoziationstypen in ein relationales Schema umsetzen
+6. Generalisierung und Aggregation in relationale Schemas übersetzen
+7. Auf der Basis eines konzeptuellen Datenmodells ein relationales Schema in einem CASE-Werkzeug modellieren
+
+
+
+## Repetition
+
+Daten in Tabellen:
+
+![1560702635128](./assets/1560702635128.png)
+
+Spalten, Zeilen und Datensätze
+
+![1560702652769](./assets/1560702652769.png)
+
+## Was ist eine Tabelle?
+
+Eine Tabelle oder *Relation* ist eine Menge von Tupeln, dargestellt als Tabellen. Diese erfüllen folgende Anforderungen:
+
+* Tabellenname: Eine Tabelle besitzt einen eindeutigen Tabellennamen. 
+* Merkmalsname: Innerhalb der Tabelle ist jeder Merkmalsname eindeutig und bezeichnet eine bestimmte Spalte mit der gewünschten Eigenschaft.
+* Keine Spaltenordnung: Die Anzahl der Merkmale ist beliebig, die Ordnung der Spalten innerhalb der Tabelle ist bedeutungslos.
+* Keine Zeilenordnung: Die Anzahl der Tupel einer Tabelle ist beliebig, die Ordnung der Tupel innerhalb der Tabelle ist bedeutungslos.
+* Identifikationsschlüssel: Eines der Merkmale oder eine Merkmalskombination identifiziert eindeutig die Tupel innerhalb der Tabelle und wird als Identifikationsschlüssel deklariert
+
+## Identifikationsschlüssel
+
+Haben zwei wichtige Eigenschaften:
+
+* Eindeutigkeit: Jeder Schlüsselwert identifiziert eindeutig einen Datensatz innerhalb der Tabelle, d.h. verschiedene Tupel dürfen keine identischen Schlüssel aufweisen.
+* Minimalität: Falls der Schlüssel eine Kombination von Merkmalen darstellt, muss diese minimal sein. Mit anderen Worten: Kein Merkmal der Kombination kann gestrichen werden, ohne dass die Eindeutigkeit
+  der Identifikation verlorengeht
+
 ## Kontrollfragen
 
 ### Selbststudium
@@ -59,8 +99,7 @@ Eine _volle funktionale Abhängigkeit_ bezeichnet nun, wenn in der beschriebenen
 
 Transitiv abhängig bedeuted hier "über Umwege abhängig", also z.B. über zwei funktionale Abhängigkeiten.
 
-> Formal: Das Merkmal C ist transitiv abhängig von A, falls B funktional abhängig von A, C funktional abhängig von B und
-nicht gleichzeitig A funktional abhängig von B ist.
+> Formal: Das Merkmal C ist transitiv abhängig von A, falls B funktional abhängig von A, C funktional abhängig von B und nicht gleichzeitig A funktional abhängig von B ist.
 
 Im Beispiel der Mitarbeitertablle beispielsweise existieren die folgenden funktionalen Abhängigkeiten: 
 
