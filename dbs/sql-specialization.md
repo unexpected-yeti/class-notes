@@ -1,6 +1,6 @@
 # SQL Spezialisierung
 
-## Lernziele
+Bemerkung: Inhalte nach Lernziel S3 gegliedert.
 
 ### Metadaten: Das Data Dictionary anwenden
 
@@ -49,7 +49,7 @@ SELECT * FROM [Student] WHERE [Semester] IS NULL;
 -- keine NULL-Einträge
 SELECT * FROM [Student] WHERE [Semester] IS NOT NULL;
 ```
- 
+
 > Dies kann in Zusammenhang mit den Joins (INNER, LEFT, RIGHT, FULL OUTER) interessant werden.
 
 ### Quantifizierte Anfragen (exists)
