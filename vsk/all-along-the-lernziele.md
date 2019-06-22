@@ -814,4 +814,890 @@ grant {
 };
 ```
 
-#### 
+# Komponentenentwurf und Entwicklungsprozess (M. Jud)
+
+## Sie verstehen das Konzept der Software-Komponenten und kennen die Kriterien zur Modularisierung.
+
+Folgende Kriterien gelten für den modularen Entwurf von Systemen:
+
+- **Zerlegbarkeit**: Teilprobleme sind unabhängig voneinander entwerfbar.
+- **Kombinierbarkeit**: Module sind unabhängig voneinander \(wieder-\)verwendbar.
+- **Verständlichkeit**: Module sind unabhängig voneinander zu verstehen.
+- **Stetigkeit**: kleine Änderungen der Spezifikation führen nur zu kleinen Änderungen im Code.
+
+### Zerlegbarkeit \(modular decomposability\)
+
+Zerlege ein Softwareproblem in eine Anzahl weniger komplexe Teilprobleme und verknüpfe diese so, dass die Teile möglichst unabhängig voneinander bearbeitet werden können. Die Zerlegung wird häufig rekursiv angewendet: Teilprobleme können so komplex sein, dass sich eine weitere Zerlegung aufdrängt.
+
+### Kombinierbarkeit \(modular composability\)
+
+Strebe möglichst frei kombinierbare Software-Elemente an, die sich auch in einem andern Umfeld wieder einsetzen lassen. Kombinierbarkeit und Zerlegbarkeit sind voneinander unabhängige Eigenschaften.
+
+### Verständlichkeit \(modular understandabilty\)
+
+Der SourceCode eines Moduls soll auch verstehbar sein ohne dass man die anderen Module des Systems kennt. Software-Unterhalt setzt voraus, dass die Teile eines Systems unabhängig von einander zu verstehen und zu warten sind.
+
+### Stetigkeit \(modular continuity\)
+
+Von einer kleinen Änderung der Anforderungen soll auch nur ein kleiner Teil der Module betroffen sein.
+
+## Sie kennen die Kriterien für gute Schnittstellen im Software-Entwurf und können solche Schnittstellen entwerfen.
+
+- Schnittstellen sollen minimal sein
+- Schnittstellen sollen einfach zu verstehen sein
+- Schnittstellen sollen gut dokumentiert sein
+
+## Sie können verschiedene Arten von Schnittstellen angemessen dokumentieren.
+
+### Operational Interfaces
+
+A component offers a range of services, which are accessed by calling interface operations.
+
+Operational Interfaces group operations belonging together. If a client uses one operation, it is quite likely that it will use some of the other operations too. Sets of such operations belong together and have related effects on the state of the component object.
+
+From the interface providers view the following needs to be specified:
+
+- The name
+- The input parameters: specifying the information passed to the component
+- The output parameters: specifying the information provided or returned by the component
+- Any resulting change of state 
+- Specification how the inputs, outputs and component states are related
+
+### Signal Interfaces
+
+A set of signals that can be sent or received by a component.
+
+From the interface providers view the following needs to be specified:
+
+- The name
+- Outgoing signals
+- Ingoing signals
+
+### Stream Interfaces
+
+Collections of data-streams, that can be consumed or produced by a component.
+
+From the interface providers view the following needs to be specified:
+
+- The name
+- The produced streams \(outgoing\)
+- The consumed streams \(ingoing\)
+- The quality of services \(e.g. max dataflow\)
+
+
+
+## Sie können Komponenten entwerfen, dokumentieren, in Java realisieren, testen und deployen.
+
+?
+
+## Sie kennen die Zusammenhänge zwischen Analyse/ Design und Test/Abnahme von Softwarekomponenten.
+
+Mit dem V-Modell lässt sich der Zusammenhang zwischen den verschiedenen Disziplinen (Requirement Engineering, Design, Implementierung) und deren Verifikation mittels Tests aufzeigen.
+
+![V-Modell](assets/v-modell.png)
+
+Beim Testen ist es wichtig Tests zu dokumentieren oder zu automatisieren, um so Regressionstests zu erreichen. 
+Mit keiner Testart und mit keinem Review findet man alle Fehler. 
+Nur im Zusammenwirken der unterschiedlichen Techniken findet man ein Maximum an Fehlern. 
+
+## Sie können geeignete Systemtests definieren, diese dokumentieren und die Durchführung protokollieren.
+
+Systemtests prüfen die gesamte Wirkungskette im Softwareprodukt, Aspekte, die mit Unit-Tests und Integrationstests nicht abgedeckt werden.
+
+Testfälle sollen in einer Testumgebung ablaufen, welche der späteren Einsatzumgebung möglichst nahe kommt.  Sobald mehrere Komponenten zusammen funktionieren müssen, gibt viele mögliche Konfigurationen, die entsprechend der Vorgaben des Konfigurationsmanagements zu testen sind.
+
+Systemtestfälle können grundsätzlich den im Backlog formulierten Anforderungen und Akzeptanzkriterien abgeleitet werden.
+
+### Systemtestfälle
+
+// TODO
+
+Systemtestfälle können grundsätzlich abgeleitet werden aus:
+
+- den im Backlog formulierten Anforderungen
+  - den im Backlog formulierten Abnahmekriterien
+  - zugehörigen, detaillierteren UseCase-Beschreibungen.
+  - der «Definition of Done»
+- Nicht funktionale Anforderungen werden oft wenig explizit festgehalten, entsprechend kommen auch nicht funktionale Tests zu kurz: Last- / Performance- / Stress- / Security- / Robustness- Tests sind ebenfalls wichtige Systemtests.
+- Wie beim Test-first-Ansatz auf Unittest-Ebene fördert auch das Formulieren der Systemtests das Verständnis der Anforderungen im Backlog und bringt Unklarheiten und Inkonsistenzen frühzeitig zu Tage.
+
+## Sie wissen welche Informationen über die zu entwickelnde Software wann, wie und wo dokumentiert werden sollen.
+
+hahahhahahahha.
+
+
+
+## Sie kennen Arten, Zweck und Bedeutung von Reviews und können ein Review durchführen und protokollieren.
+
+![Folie](assets/review-overview1.png)
+![Folie](assets/review-overview2.png)
+![Folie](assets/review-overview3.png)
+![Folie](assets/review-overview4.png)
+![Folie](assets/review-overview5.png)
+
+### Durchführung von Reviews
+
+Review-Sitzungen sollten **nicht länger als zwei Stunden dauern**.
+Überprüfe bei jeder Sitzung nur ein Objekt / Artefakt eines Autors (oder mehrere kleine verwandte Objekte / Artefakte).
+Die Teilnehmer erhalten die Objekte / Artefakte einige Tage vor der Review-Sitzung.
+Es ist wichtig, dass sich alle Mitglieder des Review-Teams darauf vorbereiten, d.h. die Unterlagen ernsthaft studieren.
+Der Leiter der Review geht die Objekte / Artefakte Seite für Seite durch und frägt die Teilnehmer, ob sie Kommentare zu einem bestimmten Abschnitt oder einer bestimmten Seite haben.
+Entdeckte Fehler und aufgeworfenen Probleme werden in einem standard Reviewprotokoll festgehalten.
+Beim klassischen Projektvorgehen sind Reviews eng an den Projektlebenszyklus gekoppelt. Sie müssen deshalb dann angesetzt werden, wenn die zu überprüfenden Objekte / Artefakte vorliegen sollten.
+Reviews bringen das beste Aufwand/Ertragsverhältnis, wenn übergeordnete Objekte / Artefakte überprüft werden (besser Anforderungen & Konzepte reviewen statt Detail-Design & Code)
+
+Die Art und Weise, wie eine Review organisiert wird, ist wichtig. 
+Der erste Zug muss so aussehen, als käme er vom Autor und nicht vom Gutachter. 
+Der Autor muss sich mit der Idee der Review wohlfühlen.
+Reviews sind im zuerst eine zwischenmenschliche Angelegenheit, der Erfolg hängt von der persönlichen Dynamik zwischen Autor und Reviewer ab. 
+Es ist wichtig flexibel zu sein, wer wessen Arbeit reviewed, d.h. kompatible Paare sich gegenseitig suchen lassen.
+Ein guter Reviewer ist nicht wertend und erkennt, dass der primäre Nutzen einer Review darin besteht, dass man gemeinsam über ein Werk spricht.
+Mögliche oder tatsächliche Fehler, die in einem Review gefunden werden, soll man nicht an die grosse Glocke hängen, sondern möglichst lokal lösen.
+
+## Sie kennen Bedeutung, Begrifflichkeit und Methoden des Konfigurationsmanagements.
+
+Im Konfigurationsmanagement geht es um das Identifizieren der Konfiguration eines Systems zu verschiedenen, definierten Zeitpunkten um über den gesamten System-Lebenszyklus Änderungen an der Konfiguration kontrolliert durchzuführen und die Integrität und Rückverfolgbarkeit sicherzustellen.
+
+SCM ist eine technische und organisatorische Führungsaufgabe:
+
+- identifizieren und dokumentieren der Eigenschaften für jedes Configuration Item 
+- steuern nötiger Änderungen dieser Eigenschaften
+- den Stand der Umsetzung von Änderungen erfasssen 
+- die Einhaltung festgelegter Anforderungen überprüfen
+
+### Software Configuration Item
+
+A software configuration item (SCI) is an aggregation of software that is designated for configuration management and is treated as a single entity in the SCM process.
+
+Items tht are controlled in addition to the code itself include:
+
+- plans
+- specifications
+- code libraries
+- data and data dictionaries
+- documentation for installation, maintenance, operations etc.
+
+### Version
+
+Eine Version ist ein spezifisches, identifizierbares Artefakt auf einem bestimmten Entwicklungsstand.
+
+### Revision
+
+Eine Revision ist eine neue Version eines Artefaktes mit dem Zweck eine ältere abzulösen.
+
+### Baseline
+
+Eine Baseline ist ein Satz von Revisionen, d.h. ein Snapshot der Konfiguration.
+
+### Release
+
+Ein Release ist eine getestete und freigegebene Baseline.
+
+## Sie können für ein kleines Entwicklungsprojekt Rahmen- und Sprint-Planung gemäss SoDa machen.
+
+looooooooooooooooooooool.
+
+## Sie können Sprintbacklogs für ein kleines Team formulieren, schätzen und geeignete Abnahmekriterien festlegen.
+
+phahahaha ja genau
+
+## Sie können ein Controlling auf Projekt- und Sprintebene  für kleine Entwicklungsprojekte gemäss SoDa führen.
+
+ech weiss au ned was ich da dezue söll säge
+
+## Sie wissen welche Informationen aus dem Entwicklungsprozess gemäss SoDa wann, wie und wo dokumentiert werden sollen.
+
+Bullshit.
+
+# Entwicklung, Entwurfsmuster, Testing, Clean Code und QS (R. Gisler)
+## Sie kennen die Aufgaben eines Versionskontrollsystems (VCS) und können es nutzen.
+
+Check
+
+## Sie kennen die verschiedenen Konzepte und Arten von Versionskontrollsystemen.
+
+Check
+
+##  Sie können mit verschiedenen VCS-(Client-)Werkzeugen alleine und im Team arbeiten.
+
+Check
+
+## Sie kennen die Vorteile eines automatisierten Buildprozesses.
+
+Check
+
+## Sie können Beispiele von Buildwerkzeugen benennen.
+
+Check
+
+## Sie beherrschen die Anwendung eines ausgewählten Buildwerkzeuges (Apache Maven).
+
+Check
+
+## Sie sind mit den wesentlichen Konzepten von Apache Maven vertraut.
+
+Check
+
+## Sie haben ein grundsätzliches Verständnis von Dependency Management.
+
+Jap
+
+## Sie wissen am Beispiel von Java und Apache Maven wie das Dependency Management funktioniert.
+
+Jap
+
+## Sie sind mit den Begriffen «dependency scopes» und «transitiv dependencies» vertraut und können diese  erklären
+
+Im Beispiel oben fällt das Element `<scope>compile</scope>`auf, das optional pro Abhängigkeit definiert werden kann.
+
+* Damit wird der Zweck und Geltungsbereich (-> Scope) der Dependency qualifiziert, **was unbedingt empfohlen wird!**
+
+Maven kennt verschiedene Scopes (hier nur die wichtigsten drei):
+* compile – Dependency wird für die Kompilation und zur Laufzeit des Programmes benötigt (Default).
+* test – Dependency ausschliesslich für die Kompilation und
+  Ausführung der Testfälle (Beispiele: JUnit, AssertJ etc.).
+* runtime – Dependency nur für Laufzeit, aber nicht für
+  Kompilation, z.B. für dynamisch geladene Implementationen.
+
+Abhängig von den Scopes sorgt Maven für spezifische Classpaths!
+* Daraus ergibt sich eine implizite Verifikation des Designs.
+
+## Sie kennen das Versionskonzept und die  Funktionsweise von Snapshots.
+
+* In einer dynamischen Entwicklungsphase sind fixe Versionen aber eher hinderlich, die Versionierung würde sonst (für jede kleinste Änderung) förmlich «gallopieren» müssen.
+  * Es würde eine Unmenge von (unnützen) Versionen produziert,
+    welche nie mehr benötigt werden.
+* Darum wurde das Snapshot-Konzept integriert: Sobald man einer Version den Appendix –SNAPSHOT trägt, gilt diese als «erneuerbar» und (noch) nicht stabil, sondern in Entwicklung.
+  * Sie wird bei jedem Build immer wieder vom Repository aufgelöst und aktualisiert.
+  * Im Repository sind Snapshots mit einem Timestamp versehen.
+* Beispiel: 5.0.1-SNAPSHOT
+  * Die noch nicht stabil veröffentlichte, zukünftige Version 5.0.1
+
+## Sie wissen auf welche Art Dependencies deployed werden.
+
+In Java werden Artefakte in der Regel als JARs ausgetauscht. Ursprünglich wurden JARs direkt in Projekte kopiert (_/lib_). Dies ist Fehleranfällig, bringt hohe Redundanz und einen grossen Platzbedarf mit sich.
+Darum wird auch in Java ein Dependency Management Tool verwendet, nachfolgend ist der Fokus nur auf Maven. Der Maven Quasi-Standard ist sehr populär - zahlreiche Dependency Managment Tools basieren auf Maven (z.B. Grape, Gradle, SBT, usw.)
+
+## Sie wissen was ein Buildserver ist.
+
+ja
+
+## Sie kennen die Vorteile des Einsatzes eines Buildservers.
+
+Ja
+
+## Sie kennen beispielhafte Produkte von Buildservern und können diese als Anwender nutzen.
+
+Ja
+
+## Sie können die Ziele der Continuous Integration (CI) erklären
+
+Ziele bei der Entwicklung von Software nach CI:
+
+- Immer ein lauffähiges Produkt (Buildresultat) zu haben, damit kontinuirlich getestet werden kann.
+- Bei Fehlern jeder Art möglichst schnell ein Feedback erhalten, durch automatisierte Tests und statische Prüfungen.
+- Im Team parallel entwickeln können und den Überblick nicht verlieren, Integrationsaufwand zu minieren und laufend über den aktuellen Stand auf dem Laufenden zu sein.
+
+## Sie kennen das Potential von automatisierten CI-Prozessen.
+
+Yo
+
+## Sie kennen die zehn wesentlichen Praktiken der CI.
+
+### Einsatz eines (zentralen) Versionskontrollsystem
+
+Sämtliche Quellen-Artefakte welche für den vollständigen Build einer Software benötigt werden unterliegen der Versionskontrolle.
+
+Fähigkeiten des Versionskontrollsystem nutzen:
+
+1. Sinnvolle Commit-Kommentare (z.B. mit Verweis auf ein Issue)
+2. Tagging: Bestimmte Versionen markieren (z.B. um einen Release eindeutig zu identifizieren)
+3. Branches für parallele Entwicklung (z.B. bugfixing oder feature branches)
+
+### Automatisierter Buildprozess 
+
+Ausschliesslich auf der Basis der aktuellen Quellen aus dem Versionskontrollsystem (VCS). Ausführung auf einem Build-Server. Führt ebenfalls die Testfälle aus.
+
+### Automatisierte Testfälle
+
+- Möglichst viel durch automatisierte Testfälle abdecken.
+  - Primär Unit Tests, weil einfach und überall lauffähig.
+  - Sekundär auch Integrationstests, z.B. Abhängig von Datenbank.
+- Fehlerhafte oder nicht vollständige Implementationen sollen so schnell wie möglich aufdecken werden
+  - Bei Integrationstests auch häufig unerwartete Nebeneffekte.
+- Bewährt haben sich auf Performance Tests (z.B. hat sich eine Änderung negativ auf die Performance ausgewirkt?)
+- Primäres Ziel: Tests müssen immer laufen bzw. im Fehlerfall so schnell wie möglich wieder gefixt werden (sollte ein gemeinsames Ziel für alle Entwickler sein)
+
+### Alle Ändern den Quellcode auf dem Hauptzweig
+
+Das ist eine doofe Idee. Aber gemäss Vorlesung:
+
+- Wenn möglich, immer auf Hauptzweig commiten. Dafür kleinere aber häufigere Changes
+
+### Bei einer Änderung wird automatisch ein Build durchgeführt.
+
+Buildserver prüft regelmässig auf Veränderungen im Versionskontrollsystem (poll), bzw. wird vom SCM aktiv informiert (push).
+Alle Resultate des Build werden offensiv kommuniziert (Testfälle, Laufzeit, Metriken, usw.).
+
+Gemeinsames Ziel für das Team: Sobald ein Build bricht sollte es die erste Priorität sein, den Build zu stabilisieren. So soll ein stabiler Build jederzeit sichergestellt werden.
+
+### Der Buildprozess muss schnell sein
+
+Je schneller die Entwickler ein Feedback bekommen dass etwas nicht mehr läuft, je besser!
+Natürlich muss ein Kompromiss gefunden werden – manche Tests benötigen mehr Zeit. Eine Möglichkeit ist, zwei (oder mehr) Builds durchzuführen:
+
+- Schneller "continuous build" für Feedback an die EntwicklerInnen
+- Langsamer, umfangreicher Build über Nacht (nightly build)
+
+### Auf/mit Kopien der produktiven Umgebung testen
+
+Die zentrale Build- und Testumgebung sollte möglichst ähnlich zur produktiven Umgebung sein, zum Beispiel:
+
+- ähnliche Hardwareausstattung
+- Betriebssystem
+- Laufzeitumgebung (z.B. Java)
+- Netzwerkzugriff und Kommunikation mit Drittsystemen
+- Datenqualität und Datenmenge
+
+Bei kleinen Systemen in der Realität gut zu erreichen, bei grossen Systemen aber häufig zu teuer.
+
+### Einfacher Zugriff auf aktuelle Buildartefakte
+
+Die Buildresultate sollten jederzeit für weitere (typisch manuelle) Tests zur Verfügung stehen.
+Wird typisch über Buildserver erreicht, welche Buildresultate archivieren können.
+Zusätzlich werden die binären (ausführbaren) Artefakte zusätzlich noch in ein binäres Repository deployed.
+
+### Offensive Information über den aktuellen Zustand
+
+Es gibt keine Geheimnisse! Offene Information nicht zur Kontrolle, sondern als gegenseitige Unterstützung!
+
+Für alle ist jederzeit einsehbar welche Änderungen:
+
+- von wem und wann eingecheckt wurden
+- von welchem Build erstmals erfasst wurden
+- zu welchen Ergebnissen geführt haben (Build, Tests)
+- zu welchem issue gehören
+- welche Massnahmen getroffen wurden
+- etc
+
+### Automatisches Deployment (CD)
+
+Wenn immer möglich sollte das Buildergebnis auch automatisch verteilt werden.
+Damit steht die aktuelle Software sofort wieder für weiterführende, (z.B. manuelle) Systemtests bereit:
+
+- hat ein schnelleres Feedback zur Folge
+- vermeidet Meldungen von Fehlern, die schon behoben sind
+
+Siehe auch DevOps.
+
+## Sie verstehen die Vorteile beim Einsatz von Entwurfsmustern.
+
+> Bewährte objektorientierte Entwürfe (Schablonen) für ein wiederkehrendes Problem
+
+- Wiederverwendung von bewährten Entwurfsmustern als Ziel.
+- Verschiedene Arten von Wiederverwendung in der Softwareentwicklung:
+  - Objekte zur Laufzeit wiederverwenden.
+  - Wiederverwendung von Quellcode / Klassen.
+  - Wiederverwendung von einzelnen Komponenten.
+  - Einsatz von Klassen-Bibliotheken / Frameworks.
+  - Wiederverwendung von Konzepten, z.B:
+    - Entwurfs-, Architektur- oder Kommunikationsmuster
+
+
+
+## Sie kennen verschiedene, ausgewählte Entwurfsmuster.
+
+WELCHEEE???
+
+## Erzeugungsmuster
+
+### Ziel
+
+Hier ist das Ziel die Abstrahierung der Erzeugung von Objekten. Entscheidung über: 
+
+- zu verwendenden konkreten Typ
+- Zeitpunkt der Erzeugung
+- Art der Erzeugung (Kontext, Initial-Erzeugung)
+
+### Beispiele
+
+Die folgenden Muster gehören zur Gruppe der Erzeugungsmuster:
+
+- Abstrakte Fabrik (Abstract Factory, Kit)
+- Erbauer (Builder)
+- Fabrikmethode (Factory Method, Virtual Constructor)
+- Prototyp (Prototype)
+- [Einzelstück (Singleton)](#singleton)
+
+#### Singleton
+
+Durch die Verwendung von Singletons kann sichergestellt werden, dass nur eine einzige Instanz einer Klasse instanziert werden kann. Dazu wird der Konstruktor mit dem Zugriffsmodifikator `private` ausgestattet.
+
+**Beispiel-Code:**
+
+```java
+public final class Singleton {
+
+    private String displayName
+    private static Singleton instance = new Singleton("hello vsk");
+
+    private Singleton(String displayName) {
+        this.displayName = displayName;
+    }
+
+    public static Singleton getInstance() {
+        return this.instance;
+    }
+}
+```
+
+**Remarks:**
+
+Im obigen Beispiel wird die statische Klassenvariable `instance` direkt bei der Deklaration instanziert (*Eager initialization*).
+Man kann hier alternativ auch eine *Lazy*-Initialization verwenden, welche das Objekt erst beim ersten Aufruf der `getInstance()` Methode instanziert. 
+Der Eager-Ansatz ist einfach umzusetzen, da man sich nicht im selben Umfang um Synchronisations-Probleme kümmern muss. 
+Für weitere Informationen über die Implementation eines "perfekten Singletons" [siehe hier](https://medium.com/@kevalpatel2106/how-to-make-the-perfect-singleton-de6b951dfdb0);
+
+**Empfehlung:**
+
+Das Singleton-Pattern hat mittlerweile einen schlechten Ruf. 
+Man soll dieses nur zurückhaltend und gezielt einsetzen, niemals als universellen, globalen Zugriffspunkt.
+
+## Strukturmuster
+
+### Ziel
+
+Die Verwendung von Strukturmustern bezweckt jeweils einen der folgenden Punkte:
+
+- Objekte (oder Klassen) zu grösseren oder veränderten Strukturen zusammenfassen
+- Unterschiedliche Strukturen einander anzupassen und miteinander zu verbinden
+
+### Beispiele
+
+- [Adapter (Adapter, Wrapper)](#adapter-wrapper)
+- Brücke (Bridge, Handle/Body)
+- Dekorierer (Decorator, Wrapper)
+- [Fassade (Facade)](#facade)
+- Fliegengewicht (Flyweight)
+- Kompositum (Composite)*
+- Stellvertreter (Proxy, Surrogate)*
+
+#### Facade
+
+Das Facade-Pattern stellt eine zusammengefasste Schnittstelle zu einer Menge von Schnittstellen mehrerer Subsysteme zur Verfügung.
+
+**Beispiel:**
+
+![Example Facade Pattern](assets/facadepattern.png)
+
+Die Fassade weiss nichts über die konkreten Implementationen der einzelnen Methoden.
+Sie kennt lediglich die Subklassen und deren Zuständigkeiten und delegiert die Anfragen entsprechend. 
+Die Subklassen wiederum wissen nichts über ihre Verwendung in der Fassade, es besteht keinerlei Referenz.
+
+Für Beispielcode und weiterführende Erklärung [klicke hier](https://www.geeksforgeeks.org/facade-design-pattern-introduction/).
+
+**Ziel:**
+
+Dieses Entwurfsmuster vereinfacht die Anwendung mehrerer Subsysteme und minimiert die Abhängigkeiten zu den Subsystemen - die Kopplung wird minimiert. 
+Der Austausch bzw. die Ablösung eines Subsystems (beispielsweise infolge Refactoring) wird enorm vereinfacht, da der Aufruf der konkreten Implementation zentral in der Fassade erfolgt. Es verbirgt daher auch die Komplexität der Subsysteme hinter einer einfach verwendbaren Fassade.
+
+**Empfehlung:**
+
+Das Facade-Pattern kann einfach zur Entkopplung eingesetzt werden. 
+Es ist hauptsächlich darauf zu achten, dass die Fassade keinerlei weitere Funktionenn bzw. Business-Logic enthält!
+
+#### Adapter (Wrapper)
+
+Durch das Adapter-Pattern wird die Schnittstelle einer Klasse an die von den Klienten erwartete (Ziel-)Schnittstelle angepasst. In der echten Welt gibt es viele Adapter, die als Beispiel funktionieren, z.B.: Ein USB zu Ethernet Adapter. Diese sind eigentlich zueinander inkompatibel, aber der Adapter übersetzt.
+
+Für alternative Erklärung inkl. Beispiel [siehe Artikel auf geeksforgeeks](https://www.geeksforgeeks.org/adapter-pattern).
+
+![Example Adapter Pattern](assets/adapterpattern.png)
+
+##### Teilnehmer
+
+- Interface (*hier `LogPerisistor`*): gewünschte Schnittstelle, kann abstrakte Klasse oder Interface sein
+- Adapter (*hier `StringPersistorAdapter`*): verwendet adaptierte Klasse/Objekt, spezialisiert oder implementiert Zielschnittstelle
+- Adaptierte Klasse (*hier `StringPersistor`*): Klasse, deren Schnittstelle adaptiert/gerwappt werden soll
+
+##### Motivation
+
+- Einfachere Wiederverwendung von existierenden Klassen oder Komponenten, deren Schnittstelle aber unpassend ist.
+- Implementation einer möglichst allgemeinen Schnittstelle und diese durch Adapter anpassen.
+
+## Verhaltensmuster
+
+### Ziel
+
+Die Verhaltensmuster decken jeweils einen oder mehrere der folgenden Punkte ab:
+
+- Beschreibung der Interaktion zwischen Objekten
+- Festlegen der Kontrollflüssen zw. Objekten
+- Delegation der Zuständigkeit und/oder Kontrolle
+
+### Beispiele
+
+- Befehl (Kommando, Command, Action, Transaction)
+- Beobachter (Observer, Dependents, Publish/Subscribe, Listener)*
+- Besucher (Visitor)
+- Interpreter (Interpreter)
+- Iterator (Iterator, Cursor)*
+- Memento (Memento, Token)
+- Plugin (Plugin)
+- Schablonenmethode (Template Method)
+- Strategie (Strategy, Policy)
+- Vermittler (Mediator)
+- Zustand (State, Objects for States)
+- Zuständigkeitskette (Chain of Responsibility)
+
+#### Strategy-Pattern
+
+Beim *Strategy*-Pattern werden verschiedene Implementationen derselben Methode generalisiert bzw. austauschbar gemacht.
+Ein Interface schreibt die zu implementierenden Methoden (gleich Verhalten) vor. 
+Verschiedene Implementationen dieses Interfaces stellen dann die konkreten Verhaltensweisen zur Verfügung.
+
+Die Klassen, welche die vorgeschriebenen Methoden verwenden, halten sich jeweils die konkrete Implementation in einer Variable des Interface-Typs, damit das Verhalten ausgetauscht werden kann. 
+Vorzugsweise wird die konkrete Implementation im Konstruktor übergeben oder per *Dependency Injection* injiziert.
+
+![Example Strategy Pattern](assets/strategypattern.png)
+
+##### Teilnehmer
+
+- Strategie (*hier `Sortable`*): Vollabstrakte Klasse oder Interface, definiert Schnittstelle
+- Kontext (*hier `Context`*): optional, kann direkt durch Client erledigt werden
+  - Besitzt Referenz auf konkrete Strategie, erstellt diese ggf. selber
+  - Stellt ggf. Datenschnittstelle für Strategien zur Verfügung
+  - Meinung: Nur verwenden, wenn dies nicht Concern des Clients ist, bzw. wenn das SRP verletzt würde.
+- Konkrete Strategien (*hier `BubbleSort`, `MergeSort` etc.*): Implementieren konkreten Algorithmus, greifen ggf. auf Kontext zu
+
+##### Motivation
+
+- Anbieten von unterschiedlichen Implementationen eines Algorithmus
+- Eng verwandte Klasen, die sich nur im Verhalten unterscheiden, zusammenfassen
+- Vermeiden von unzähligen Bedingungsanweisungen in der/den aufrufenden Klasse(n)
+
+##### Empfehlung
+
+Dieses Pattern wird leicht unterschätzt und kann sich bereits bei sehr kleinen Methoden lohnen. 
+Es lassen sich z.B. grosse `switch`-Statements oder viele aufeinanderfolgende `if`-Anweisungen eliminieren.
+Die Entscheidung, welche konkrete Implemenation verwendet werden soll, kann der aufrufenden Klasse (z.B. Client) abgenommen und an einem adäquaten Ort vorgenommen werden.
+
+#### Beobachter
+
+Definiert eine Abhängigkeit zwischen einem Subjekt (Observable) dessen Zustand ändern kann, und einer Menge von Beobachtern (Observer) die darüber informiert werden sollen
+
+![1560418025167](assets/1560418025167.png)
+
+Teilnehmer:
+
+- Subjekt - Observable: Verwaltet seine Beobachter (0..n) und bietet Methoden zur An- und Abmeldung an
+- Beobachter - Observer: Definiert eine Benachrichtigungsschnittstelle
+- Konkretes Subjekt / Konkreter Beobachter: Konkrete Typen senden und empfangen Aktualisierungen
+
+Motivation:
+
+- Wenn nur eine lose Kopplung der Zuhörer bestehen soll/darf.
+- Wenn die Anzahl der vorhandenen Zuhörer nicht interessiert.
+- Zur Kommunikation entgegen der Abhängigkeitsrichtung.
+- Auch zur Auflösung von zyklischen Referenzen.
+
+Sehr typisch für MVC: Änderungen des Modelles müssen an die verschiedenen Views propagiert werden.
+
+##### Event/Listener in Java
+
+In Java nutzt man als Ersatz für das Observer-Pattern das Event/Listener Pattern (in unserem VSK Projekt ebenfalls eingesetzt bei dem Logger-Viewer als Entkoppelung der RMI Kommunikation. RMI-Client leitet die Nachrichten an die registrierten Beobachter (der Viewer) weiter).
+
+![1560418234591](assets/1560418234591.png)
+
+
+
+Namensgebung:
+
+- Event -> ist das eigentliche Subjekt (folgend als `XXX`)
+- Eventquelle (verwaltet die Beobachter)
+  - `public addXXXListener(...)`
+  - `public removeXXXListener(...)`
+  - `public fireXXXEvent(...)`
+- Listener (Beobachter):
+  - `public XXX[Event|Performed]` (in unserem Projekt: `notify(Event)`)
+
+
+
+**Bei Java konsequent das Event-/Listener-Modell verwenden!** Es ist deutlich besser und flexibler als das reine Observer-Pattern.
+
+##  Sie können geeignete Entwurfsmuster auswählen und gezielt einsetzen.
+
+Okay
+
+## Sie kennen die verschiedenen Testarten und sind in der Lage gute Unit- und Integrationstests zu schreiben
+
+## Unit Tests
+
+Sind funktionale Test von einzelnen, in sich abgeschlossenen Units (typisch Klasse, aber auch Komponente oder Modul).
+Unit Tests müssen auf einem beliebigen System und jederzeit lauffähig sein.
+Unit Tests sollen nie aufgrund von Fremdeinflüssen fehlschlagen.
+Der Nutzen von Unit Tests hat folgende positive und negative Aspekte.
+
+**Positiv**:
+
+- Neue oder veränderte Komponenten können sehr schnell getestet werden (regressiv).
+- Automatisiertes, übersichtliches Feedback / Reporting.
+
+**Negativ**:
+
+- Für GUI-Komponenten etwas aufwändiger
+- Zu viele Tests verhindern innovation
+- Qualität und Nachvollziehbarkeit der Testfälle muss im Auge behalten werden: Qualität vor Quantität!
+- In manchen Architekturen / Umgebungen schwierig umsetzbar.
+
+**Ziele** von guten Unit Tests:
+
+- schnell
+- einfach ausführbar
+- selbstvalidierend
+- automatisiert
+- lose Kopplung
+
+## Integrations Test
+
+Testfälle welche mit I/O interagieren sind Integrationstests.
+
+## Sie beherrschen die Entwicklung nach dem Test First Prinzip.
+
+isi bro
+
+## Sie nutzen Werkzeuge zur Messung der Codeabdeckung aktiv zu Verbesserung Ihres Codes und der Testfälle
+
+Jep
+
+## Sie kennen das Prinzip der Dependency Injection.
+
+jääjo
+
+## Sie verstehen was Test Doubles sind und können sie erklären.
+
+Ein _Double_ ist ein Platzhalter für die echte, produktive Implementation während Tests.
+
+Hauptsächlich dienen Test Doubles dazu den Aufwand für Integrations-Tests zu reduzieren.
+Somit können _fast integrative_ Tests schnell, häufig, überall lauffähig, und vollständig automatisiert ausgeführt werden.
+
+Häufig spricht man unpräzis nur von Mocks und Mocking.
+Es gibt **Dummies, Stubs, Spies, Mocks und Fakes**:
+
+![Test Double Klassenhierarchie](assets/test-doubles.png)
+
+Mit Dummies und Stubs erreicht man eine bessere Testisolation durch einfache Ersatzimplementationen.
+Mit Spies und Mocks kann das Verhalten einfacher testen.
+Mit einem Fake erreicht man die vollständige Entkopplung zu einer Abhängigkeit.
+
+## Dummy
+
+Ein Dummy ist eine sehr primitive und oft **leere** Ersatz-Implementation.
+Er dient zur **funktionslosen** Entkopplung von unerwünschten Abhängigkeiten.
+
+**Beispiel**:
+Einem Objekt muss ein Logger übergeben werden. 
+Weil das Loggen ist nicht das eigentliche Testziel, kann man mit einem Dummy einen Logger übergeben der nichts macht.
+
+## Stub
+
+Ein Stub ist eine einfache Implementation, welche sinnvolle, vordefinierte Werte zurückliefert.
+Erleichtert es Tests mit verschiedenen Zuständen (States) zu testen.
+Ein Zustand (State) ist bei Stubs in der Regel konstant.
+Daher werden für die unterschiedlichen Testziele auch oft mehrere unterschiedliche Stubs erstellt.
+
+## Spy
+
+Ein Spy ist eine alternative Implementation, welche dynamische Werte zurückliefert.
+Unteranderem misst ein Spy folgende Metriken von Methoden:
+
+- Anzahl/Häufigkeit
+- Parameter
+- Zeitpunkt
+- Exceptions
+
+Erleichtert es das Verhalten (Behavior) von Klassen zu testen.
+
+## Mock
+
+Ein Mock ist eine Spezialisierung eines Spy.
+Im Unterschied zu einem Spy kann ein Mock eine korrekte Interaktion selbst verifizieren.
+Einziger Unterschied ist der Ort der Verifikation, Mocks sind dadurch spezifischer.
+
+## Fake
+
+Ein Fake ist eine alternative Implementation einer Komponente. Erleichtert es die vollständige Entkopplung einer Abhängigkeit innerhalb von Tests.
+
+
+
+## Sie kennen die verschiedenen Arten von Test Doubles und können diese adäquat einsetzen.
+
+Siehe oben
+
+## Sie kennen exemplarische Mocking-Frameworks und können diese nutzen.
+
+Mockito 
+
+##  Sie kennen die verschiedenen Aspekte die es beim Deployment zu beachten gilt.
+
+![Folie](./assets/deployment-aspekt-1.png)
+![Folie](./assets/deployment-aspekt-2.png)
+![Folie](./assets/deployment-aspekt-3.png)
+![Folie](./assets/deployment-aspekt-4.png)
+![Folie](./assets/deployment-aspekt-5.png)
+![Folie](./assets/deployment-aspekt-6.png)
+
+
+
+## Sie verstehen einfache Deploymentdiagramme und können diese erstellen.
+
+### UML 1.x
+
+![Example](./assets/deployment-uml-1.png)
+
+### UML 2
+
+![Example](./assets/deployment-uml-2.png)
+
+
+
+## Sie kennen das dreistellige Versionsschema nach «semantic versioning» und können es anwenden.
+
+* `<Major>.<Minor>.<Bugfix/Maintenance>`
+
+## Wie kennen typische Deployment-Artefakte von Java.
+
+- Die häufigste Art von Deployment sind JAR-Dateien.
+- Beispiel für Artefakt ch.hslu.vsk:stringpersistor-api:5.0.0:
+  - POM (Metainformationen): stringpersistor-api-5.0.0.pom
+  - JAR (Binary): stringpersistor-api-5.0.0.jar
+  - JavaDoc: stringpersistor-api-5.0.0-javadoc.jar
+  - Source (bei OSS): stringpersistor-api-5.0.0-sources.jar
+  - Zu allen Artefakten werden noch Hashes produziert.
+- Dass die Quellen und die JavaDoc auch als JAR (eigentlich ZIP) geliefert werden ist Konvention und kann Anfänger verwirren.
+  - Letztlich aber egal, die Einheitlichkeit ist wichtiger!
+- Vorteil, z.B. für Entwicklungsumgebungen:
+  Es ist implizit klar, wo die Dokumentation und ggf. der Source für
+  ein bestimmtes JAR gefunden wird  Selbstkonfiguration.
+
+## Sie kennen den Zweck eines Binär-Repositories und können dieses nutzen.
+
+Bei Maven ist der zentrale Server ein Maven Repository (OSS).
+Es gibt verschiedene öffentliche Repositories zum Abhängigkeiten zu beziehen ([Maven Central](http://repo.maven.apache.org/maven2/), [BinTray](https://bintray.com/bintray/jcenter).
+Auf öffentliche Repositores haben nur ausgewählte Personen Schreibrechte.
+Unternehmen betreiben in der Regel interne Repositores (z.B. mit [Sonatype/Nexus](https://de.sonatype.com/nexus-repository-sonatype), [JFrog/Artifactory](https://www.jfrog.com/open-source/)).
+Auf dem lokalen Rechner existiert auch ein Repository (_$HOME/.m2/repository_) welches zum cachen von Artefakten verwendet wird.
+Repositores werden in der Maven Konfiguration (_$HOME/.m2/settings.xml_) definiert.
+
+## Sie kennen die Motivation von Clean Code.
+
+
+
+## Sie kennen die Kriterien von Clean Code bezüglich der Implementation von guten Testfällen
+
+## Unit Tests
+
+Gute und umfassende Tests sind die fundamentale Basis für alle weiteren Bemühungen zur Verbesserung der (Code-)Qualität.
+Qualität in Form von Reliability, Changeability, Efficiency, Security, Maintainability, Portability, Reusability etc.
+
+Gute Unit Tests sind die erste, schnellste, einfachste Teststufe. Sie bieten schnelles erstes Feedback ob es funktioniert und dieenen als Regression, als auch als Basis für jedes Refactoring.
+
+Nach Roy Osherove ist die Definition eines Unit Tests wie folgt: 
+
+> A unit test is an automated piece of code that invokes a unit of work in the system and then checks a single assumption about the behavior of that unit of work.
+
+### Test Driven Development (TDD)
+
+Die drei Gesetze des TDD:
+
+1. Produktiver Code darf erst implementiert werden, wenn es dafür einen Unit-Test gibt.
+2. Dieser Unit-Test darf nur gerade so viel Code enthalten, dass er fehlerfrei kompiliert, aber als Test scheitert.
+3. Man ergänzt jeweils nur gerade so viel produktiven Code, dass der scheiternde Test besteht.
+
+Der Zyklus dieses Ablaufes liegt dabei im Bereich von Sekunden bis Minuten!
+Tests und Produktivcode werden praktisch zeitgleich geschrieben; Tests eilen nur wenig voraus.
+
+### Saubere Unit Tests
+
+Für Testcode sollen die identischen Qualitätsstandards gelten wie für produktiven Code!
+
+Drei Dinge machen einen sauberen Unit Test aus:
+
+1. Lesbarkeit durch Klarheit
+2. Lesbarkeit durch Einfachheit
+3. Lesbarkeit durch Ausdrucksdichte
+
+Jeder Testfall nutzt das Build-Operate-Check-Pattern (vergleiche Triple A):
+
+1. Erstellen der Testdaten
+2. Manipulieren der Testdaten
+3. Verifikation der Ergebnisse
+
+Um den Code lesbarer zu machen schreiben uns ein domänenspezifisches Set von (typisch statischen) Utility-Methoden.
+Diese machen den Testcode kompakter und aussagekräftiger.
+
+```java
+assertResponeIsXML()
+assertResponseContainsElement()
+```
+
+Des weiteren ist es ein Ziel nur ein `assert` pro Test zu haben.
+Nicht immer sinnvoll umsetzbar, aber wenn: VIEL VIEL VIEL VIEL BESSER! (YEAH VOLL COOL, YUHU)
+
+Weniger (bzw. keine) assert-Messages notwendig, weil die Testfälle selber schon sehr selektiv sind.
+
+Aus bei Tests soll maan SLA, SRP und SOC einhalten:
+
+- Single Level of Abstraction (SLA)
+- Single Responsibility Principle (SRP)
+- Separation of Concerns (SoC)
+
+Ein untrügliches Zeichen für Verletzung: Eine Testmethode wird in mehrere Abschnitte gegliedert, vielleicht sogar noch mit Kommentarblöcken unterteilt.
+
+### F.I.R.S.T Prinzip
+
+Das First Prinzip besteht aus folgenden Begriffen:
+
+- **Fast**: Tests sollen schnell sein, damit man sie jederzeit und regelmässig ausführt.
+- **Independent**: Tests sollen voneinander unabhängig sein, damit sie in beliebiger Reihenfolge und einzeln ausgeführt werden können.
+- **Repeatable**: Tests sollten in/auf jeder Umgebung lauffähig sein, egal wo und wann.
+- **Self-Validating**: Tests sollen mit einem einfachen boolschen Resultat zeigen ob sie ok sind oder nicht.
+- **Timely**: Tests sollten rechtzeitig, d.h. vor dem produktiven Code geschrieben werden. 
+
+### Uncle Bob's Unit-Test Heuristiken
+
+Unclue Bob's Unit-Test Heuristiken bestehen aus folgenden 9 Heuristiken:
+
+1. Unzureichende Tests vermeiden (Ziel: 100% Testabdeckung wegen Murphy's Law)
+2. Coverage-Werkzeug verwenden (machen es leicht ungetesteten Code audzudecken)
+3. Triviale Tests nicht überspringen
+4. Deaktivierte Tests sind ein Waarnsignal (Temporär ok, aber nie für immer)
+5. Grenzbedingungen testen (Meist wird «die Mitte» eines Algorithmus richtig implementiert, aber seine Grenzen falsch beurteilt)
+6. Fehler-Nachbarschaft gründlich testen (Findet man in einer Klasse / Funktion einen Fehler sollte man diese erschöpfend testen. Es besteht eine hohe Wahrscheinlichkeit, dass darin noch weitere Fehler gefunden werden.)
+7. Muster des Scheiterns zur Diagnose nutzen
+8. Hinweise von Coverage Patterns nutzen (beim Troubleshooting von Tests)
+9. Tests sollen schnell sein (Need for speed!)
+
+## Sie kennen die Kriterien von Clean Code zur Implementation von guten Methoden.
+
+### Anforderungen an Funktionen
+
+1. Funktionen sollten klein sein
+2. Pro Funktion nur eine Aufgabe (SRP und "to"-Ansatz)
+3. Nur eine Abstraktionsebene pro Funktion (SLA)
+4. Switch-Anweisungen vermeiden (SRP, OCP, DRY)
+5. Anzahl der Funktionsargumente minimieren (max. 3)
+6. Kein Flag-Argumente (formale Parameter).
+7. Keine Nebeneffekte einbauen
+8. Output-Argumente vermeiden
+9. Anweisungen und Abfragen trennen
+10. Keine Fehlercodes, besser Exceptions!
+11. Fehlerverarbeitung ist eine Aufgabe (separate Methode)
+12. Gute Namensgebung von Funktionen (weniger als 20 Zeilen im Schnitt, max 100 Zeilen, max. zwei Ebenen)
+
+### Uncle Bob's Funktions Smells
+
+1. Zu viele Argumente (max. 3)
+2. Output Argumente 
+3. Flag-Argumente 
+4. Tote Funktionen 
