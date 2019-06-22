@@ -147,6 +147,7 @@ Nach Roy Osherove ist die Definition eines Unit Tests wie folgt:
 
 ### Test Driven Development (TDD)
 Die drei Gesetze des TDD:
+
   1. Produktiver Code darf erst implementiert werden, wenn es dafür einen Unit-Test gibt.
   2. Dieser Unit-Test darf nur gerade so viel Code enthalten, dass er fehlerfrei kompiliert, aber als Test scheitert.
   3. Man ergänzt jeweils nur gerade so viel produktiven Code, dass der scheiternde Test besteht.
@@ -158,17 +159,20 @@ Tests und Produktivcode werden praktisch zeitgleich geschrieben; Tests eilen nur
 Für Testcode sollen die identischen Qualitätsstandards gelten wie für produktiven Code!
 
 Drei Dinge machen einen sauberen Unit Test aus:
+
   1. Lesbarkeit durch Klarheit
   2. Lesbarkeit durch Einfachheit
   3. Lesbarkeit durch Ausdrucksdichte
 
 Jeder Testfall nutzt das Build-Operate-Check-Pattern (vergleiche Triple A):
+
   1. Erstellen der Testdaten
   2. Manipulieren der Testdaten
   3. Verifikation der Ergebnisse
 
 Um den Code lesbarer zu machen schreiben uns ein domänenspezifisches Set von (typisch statischen) Utility-Methoden.
 Diese machen den Testcode kompakter und aussagekräftiger.
+
 ```java
 assertResponeIsXML()
 assertResponseContainsElement()
@@ -196,6 +200,7 @@ Das First Prinzip besteht aus folgenden Begriffen:
 
 ### Uncle Bob's Unit-Test Heuristiken
 Unclue Bob's Unit-Test Heuristiken bestehen aus folgenden 9 Heuristiken:
+
   1. Unzureichende Tests vermeiden (Ziel: 100% Testabdeckung wegen Murphy's Law)
   2. Coverage-Werkzeug verwenden (machen es leicht ungetesteten Code audzudecken)
   3. Triviale Tests nicht überspringen
@@ -209,6 +214,7 @@ Unclue Bob's Unit-Test Heuristiken bestehen aus folgenden 9 Heuristiken:
 ## Funktionen
 
 ### Anforderungen an Funktionen
+
   1. Funktionen sollten klein sein
   2. Pro Funktion nur eine Aufgabe (SRP und "to"-Ansatz)
   3. Nur eine Abstraktionsebene pro Funktion (SLA)

@@ -7,11 +7,11 @@
 ### Sie können ein Review durchführen und protokollieren
 
 ## Arten, Bedeutung und Zweck von Reviews
-![Folie](./assets/review-overview1)
-![Folie](./assets/review-overview2)
-![Folie](./assets/review-overview3)
-![Folie](./assets/review-overview4)
-![Folie](./assets/review-overview5)
+![Folie](./assets/review-overview1.png)
+![Folie](./assets/review-overview2.png)
+![Folie](./assets/review-overview3.png)
+![Folie](./assets/review-overview4.png)
+![Folie](./assets/review-overview5.png)
 
 ## Durchführung von Reviews
 Review-Sitzungen sollten **nicht länger als zwei Stunden dauern**.
