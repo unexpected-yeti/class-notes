@@ -4,8 +4,9 @@ Notizen für diverse Module, verfügbar unter [https://yeti.gitbook.io/class-not
 
 Für folgende Module sind Notizen verfügbar:
 
-* [VSK](https://yeti.gitbook.io/class-notes/vsk)
+* [DAVI](https://yeti.gitbook.io/class-notes/davi)
 * [DBS](https://yeti.gitbook.io/class-notes/dbs)
 * [ITEO](https://yeti.gitbook.io/class-notes/iteo)
 * [PMB](https://yeti.gitbook.io/class-notes/pmb)
+* [VSK](https://yeti.gitbook.io/class-notes/vsk)
 
