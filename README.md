@@ -8,5 +8,6 @@ Für folgende Module sind Notizen verfügbar:
 * [DBS](https://yeti.gitbook.io/class-notes/dbs)
 * [ITEO](https://yeti.gitbook.io/class-notes/iteo)
 * [PMB](https://yeti.gitbook.io/class-notes/pmb)
+* [PMRE](https://yeti.gitbook.io/class-notes/pmre)
 * [VSK](https://yeti.gitbook.io/class-notes/vsk)
 
