@@ -60,6 +60,7 @@ Zusammenhänge in der Datenstruktur entsprechen den visuellen Zusammenhängen de
 ![image-20190926150237591](assets/image-20190926150237591.png)
 
 ### Preattentive Processing
+
 https://infovis-wiki.net/wiki/Preattentive_processing
 https://www.csc2.ncsu.edu/faculty/healey/PP/index.html
 
