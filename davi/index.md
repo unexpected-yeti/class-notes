@@ -200,3 +200,45 @@ https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content-discovered
 ![image-20190926153600557](assets/image-20190926153600557.png)
 
 ![image-20190926153613209](assets/image-20190926153613209.png)
+
+### Normalization
+
+TODO
+
+### Quality of Visualization
+
+![quality-vis](assets/quality-vis.png)
+
+### Creating a Visual Representation
+
+  1. Define the problem.
+  2. Examine the nature of the data to represent.
+  3. Number of dimensions.
+  4. Data structures.
+  5. Types of interaction.
+
+![Creating a Visual Representation](assets/mazza-problem.png)
+
+### Five Kinds of Comparisons
+
+Die fünf Arten sind:
+  1. **COMPONENT COMPARISON:** showing the size of each part as a percentage of the total.
+  2. **ITEM COMPARISON:** how things rank: are they about the same, or is one more or less than the others?
+  3. **TIME SERIES COMPARISON:** how they change over time, whether the trend over weeks, months, quarters, years is increasing, decreasing, fluctuating, or remaining constant.
+  4. **FREQUENCY DISTRIBUTION COMPARISON:** 
+  5. **CORRELATION COMPARISON:** whether the relationship between two variables follows—or fails to follow—the pattern you would normally expect.
+
+### Five Principals in the Theory of Data Graphics
+
+Die Prinzipien sind:
+  1. Above all esle show the data.
+  2. Maximize the data ink ratio.
+  3. Erease non-data ink.
+  4. Erease redundant data-ink.
+  5. Revise and edit.
+
+#### Data Ink
+
+> Tufte 2004, p93: Data-ink is the non-erasable core of agraphic, the non-redundant ink arranged in response to variation in the numbers represented.
+
+https://infovis-wiki.net/wiki/Data-Ink\_Ratio
