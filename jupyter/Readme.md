@@ -22,7 +22,6 @@ Zur Vereinfachung der Inbetriebnahme wurde ein Docker-Image erstellt, welches di
 - scipy 
 - seaborn 
 - tqdm
-- tqdm 
 
 Damit sollten die Anforderungen an die folgenden Module abgedeckt sein:
 
@@ -35,7 +34,7 @@ Damit sollten die Anforderungen an die folgenden Module abgedeckt sein:
 Das erstellte Image kann wie folgt heruntergeladen werden:
 
 ```sh
-docker pull docker.pkg.github.com/unexpected-yeti/class-notes/jupyter-hslu:1.0.0
+docker pull docker.pkg.github.com/unexpected-yeti/class-notes/jupyter-hslu:1.0.1
 ```
 > Es wird ein persönliches Token benötigt, um auf Githubs Docker-Registry zuzugreifen. 
 Für Details [siehe hier.](https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-docker-for-use-with-github-packages)
@@ -49,7 +48,7 @@ Mit separat erstelltem Docker Volume:
 ```sh
 sudo docker volume create --name {volume-name} --opt type=none --opt o=bind --opt device=/path/to/your/folder
 
-sudo docker run -it -p 8888:8888 --mount source={volume-name},target=/home/jovyan -e JUPYTER_RUNTIME_DIR=/tmp/runtime docker.pkg.github.com/unexpected-yeti/class-notes/jupyter-hslu:1.0.0
+sudo docker run -it -p 8888:8888 --mount source={volume-name},target=/home/jovyan -e JUPYTER_RUNTIME_DIR=/tmp/runtime docker.pkg.github.com/unexpected-yeti/class-notes/jupyter-hslu:1.0.1
 ```
 
 > Falls mit WSL2 gearbeitet wird gilt zu beachten, dass WSL2 eine eigene IP-Adresse zugewiesen bekommt. Somit können die Windows-Applikationen nicht per `localhost` auf die Jupyter-Instanz zugreifen.
@@ -57,5 +56,5 @@ sudo docker run -it -p 8888:8888 --mount source={volume-name},target=/home/jovya
 ### Windows
 
 ```ps1
-docker run -it -p 8888:8888 -v C:\path\to\your\folder:/home/jovyan -e JUPYTER_RUNTIME_DIR=/tmp/runtime docker.pkg.github.com/unexpected-yeti/class-notes/jupyter-hslu:1.0.0
+docker run -it -p 8888:8888 -v C:\path\to\your\folder:/home/jovyan -e JUPYTER_RUNTIME_DIR=/tmp/runtime docker.pkg.github.com/unexpected-yeti/class-notes/jupyter-hslu:1.0.1
 ```
