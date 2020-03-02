@@ -45,6 +45,25 @@ A simple example for measuring the eclidean distance between $X = (8, 6)$ and $Y
 
 Python example:
 
+```python
+def euclidean_distance(v1, v2):
+    ## My first, very naive and verbose approach:
+    # e = 0
+    # for i in range(0, len(v1)):
+    #     e += (v1[i] - v2[i])**2
+    # return np.sqrt(e)
+    
+    # Better approach using properties of numpy.ndarray:
+    # v1, v2 are of type `numpy.ndarray`. These arrays can be
+    # subtracted from each other just by performing v1 - v2.
+    return np.sqrt(np.sum((v1 - v2)**2))
+
+print("Distance between car 0 and car 1 = ", euclidean_distance(X_car0, X_car1))
+print("Distance between car 0 and car 2 = ", euclidean_distance(X_car0, X_car2))
+```
+
+
+
 ### Cosine Similarity & Distance
 
 While the euclidean distance measures the length $d​$ between two points, the Cosine similarity measures the angle $\phi​$ between the two vectors $X​$ and $Y​$.
@@ -52,6 +71,21 @@ While the euclidean distance measures the length $d​$ between two points, the 
 ![1583083592646](assets/1583083592646.png)
 
 In the right picture, the cosine similarity between the two points is 0 - but they have a large Euclidean similarity.
+
+```python
+def cosine_similarity(v1, v2):
+    # First approach (naive and verbose)
+    # return np.sum(v1 * v2) / (np.sqrt(np.sum(v1**2)) * np.sqrt(np.sum(v2**2)))
+    
+    # Better approach:
+    # np.dot = Dot product
+    # np.linalg.norm = n-th norm (none given means n = 2, so the L^2 norm)
+    sim = np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2))
+    return sim
+
+print("Distance between car 0 and car 1 = ", cosine_distance(X_car0, X_car1))
+print("Distance between car 0 and car 2 = ", cosine_distance(X_car0, X_car2))
+```
 
 #### Cosine Similarity
 
@@ -63,6 +97,13 @@ cos(X,Y) = \frac{\langle X,Y \rangle}{||X||_2\cdot||Y||_2} = \frac{\sum_{i=1}^n{
 $$
 
 The **distance** is defined by $1 - \text{cosine similarity}$
+
+```python
+def cosine_distance(v1, v2):
+    return 1 - cosine_similarity(v1, v2)
+```
+
+
 
 ### Jaccard Similarity for Sets
 
@@ -82,7 +123,25 @@ Possible applications:
 
 * Text paragraphs are similar if they use the same jargon / (word-) stems
 
+```python
+def jaccard_similarity(list1, list2):
+    similarity = 0
+    similarity = len(np.intersect1d(list1, list2)) / len(np.union1d(list1, list2))
+    return similarity
+```
 
+The similarities can also be visualized using a heatmap. The darker the box, the more similar they are.
+
+```python
+dm = np.asarray([[jaccard_similarity(p1, p2) 
+                  for p1 in X_train[0:40]] 
+                    for p2 in X_train[0:40]])
+fig, ax = plt.subplots(figsize=(18,12))    
+ax = sns.heatmap(dm, linewidth=0.5, cmap="YlGnBu")
+plt.show()
+```
+
+![Download](assets/Download.png)
 
 ### Manhattan Distance
 
@@ -103,7 +162,38 @@ A few examples:
 * from *banana* to *ananas*: 1 [d] + 1 [a] = 2
 * from *Hello* to *Yellow*: 1 [c] + 1 [a] = 3
 
+## Get nearest neighbour
 
+Using the euclidean or cosine similarity, we can search for the most similar neighbor of a data point in a data set in Python. `distance` is a similarity function passed into the function. Note, here we work with **distance**.
+
+```python
+def get_nearest_neighbor(source_car, cars, distance):
+    """First approach (naive & verbose)
+    # Just perform distance in a list comprehension
+    distances = [distance(source_car, car) for car in cars]
+    idx = distances.index(min(distances))
+    distance = min(distances)
+    return distance, idx
+    """
+
+    # tqdm shows a fancy progress bar
+    similarities = np.array([distance(source_car, car) for car in tqdm(cars)])
+    # argmin returns the index of the min value
+    idx = np.argmin(similarities)
+    distance = np.min(similarities)
+    
+    return distance, idx
+```
+
+For **similarities**, the function is very similar but instead of the min value, the max value is obtained.
+
+```python
+def nearest_neighbor(wine, wines):
+    similarities = [jaccard_similarity(wine, other_wine) for other_wine in wines]
+    idx = np.argmax(similarities)
+    similarity = np.max(similarities)
+    return idx, similarity
+```
 
 ## From points to distributions
 
