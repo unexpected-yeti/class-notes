@@ -2,7 +2,6 @@
 
 TODO:
 - [ ] document k-NN
-- [ ] Add python samples for the implemented algorithms
 
 ## Distance vs. Similarity
 
