@@ -8,7 +8,6 @@ RUN python -m pip install ortools
 
 # ML specific
 RUN python -m pip install pandas-profiling seaborn mlxtend nltk scikit-image tqdm plotly scipy jupyter_contrib_nbextensions
-RUN jupyter contrib nbextension install --user
 
 # IPCV specific
 RUN python -m pip install opencv-contrib-python
@@ -21,3 +20,6 @@ RUN apt install -y libxrender-dev
 RUN apt-get update
 RUN apt-get install -y libxext-dev
 USER jovyan
+
+RUN jupyter contrib nbextension install --user
+RUN jupyter nbextension enable exercise2/main

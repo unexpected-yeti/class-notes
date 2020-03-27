@@ -1,0 +1,6 @@
+# Glossar
+
+
+
+## Wahrscheinlichkeitsdichtefunktion
+
