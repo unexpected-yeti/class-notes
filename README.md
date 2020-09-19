@@ -10,4 +10,5 @@ Für folgende Module sind Notizen verfügbar:
 * [PMB](https://yeti.gitbook.io/class-notes/pmb)
 * [PMRE](https://yeti.gitbook.io/class-notes/pmre)
 * [VSK](https://yeti.gitbook.io/class-notes/vsk)
+* [KBDS](https://yeti.gitbook.io/class-notes/kbds)
 
