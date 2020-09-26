@@ -12,3 +12,9 @@ Struktur differenzieren und eine geeignete Datenbanklösung für deren
 Speicherung bestimmen.
 - Sie Verstehen den Unterschied zwischen den verschiedenen
 Wissenstypen und wie diese genutzt bzw. erlernt werden können.
+
+# SW02
+
+- Zweck sowie Einsatzmöglichkeiten von Knowledge Representation Formalisms sind ihnen geläufig.
+- Sie kennen mögliche Architekturen zum Bau eines Inferenzsystems.
+- Die Modellierungsansätze von Conceptual Graphs, Semantic Networks, Frame Systems sowie Description Logic sind ihnen bekannt und können angewandt werden.
